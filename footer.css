@@ -1,0 +1,23 @@
+#footer {
+    height: 200px;
+    background-color: azure;
+    padding-top: 20px;
+}
+
+.footer-links {
+    margin-top: 10px
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer-links p {
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links a:hover {
+    color: gray;
+}

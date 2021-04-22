@@ -1,0 +1,17 @@
+#header {
+    height: 100px;
+    background-color: azure;
+}
+
+#title {
+    display: flex;
+    align-items: center;
+}
+
+#login-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
