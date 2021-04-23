@@ -1,38 +1,56 @@
+#background {
+    background-image: url('background2.png'); 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-attachment: fixed; 
+    background-size: cover;
+}
+
 #main-body {
-    background-color: whitesmoke;
+}
+
+#main-idea {
+    display: flex;
+    align-items: center;
+
+    margin-top: 200px;
+    margin-bottom: 300px;
 }
 
 #annotations {
     display: flex;
     align-items: center;
 
-    margin-top: 300px;
-    margin-bottom: 400px;
+    margin-bottom: 300px;
 }
 
-#product {
+#citations {
     display: flex;
     align-items: center;
 
-    margin-top: 400px;
-    margin-bottom: 400px;
+    margin-bottom: 300px;
 }
 
 #rating {
     display: flex;
     align-items: center;
 
-    margin-top: 400px;
     margin-bottom: 300px;
 }
 
 #add-to-chrome {
     justify-content: center;
-    margin-bottom: 200px;
+    margin-bottom: 300px;
 }
 
 #add-to-chrome button {
     margin-top: 25px;
     width: 200px;
     height: 50px;
+}
+
+.panel-body {
+    background-color: whitesmoke; 
+    height: 300px;
+    border-radius: 10px;
 }
