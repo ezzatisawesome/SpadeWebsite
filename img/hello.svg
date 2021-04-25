@@ -31,31 +31,43 @@
                 stroke-dashoffset: 0;
             }
         }
+
+        .class-text {
+            animation: hello 1s linear forwards;
+        }
+        @hello {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
     </style>
 
     <rect id="svg-background" width="500" height="350" rx="10px" ry="10px" fill="lightgray"/>
     <g>
-        <circle cx="15px" cy="15px" r="5px" style="fill:rgb(238,105,84);"/>
-        <circle cx="30px" cy="15px" r="5px" style="fill:rgb(234,179,84);"/>
-        <circle cx="45px" cy="15px" r="5px" style="fill:rgb(95,190,82);"/>
+        <circle cx="15px" cy="20px" r="5px" style="fill:rgb(238,105,84);"/>
+        <circle cx="30px" cy="20" r="5px" style="fill:rgb(234,179,84);"/>
+        <circle cx="45px" cy="20" r="5px" style="fill:rgb(95,190,82);"/>
     </g>
-    <line class="browser-line" x1="70" x2="485" y1="15" y2="15" stroke="#3f3f3f" stroke-linecap="round"/>
+    <line class="browser-line" x1="70" x2="484" y1="20" y2="20" stroke="#3f3f3f" stroke-linecap="round"/>
     <rect id="page" width="480" height="300" x="10px" y="40px" rx="10px" ry="10px" fill="white"/>
     <g>
-        <line class="browser-line" x1="30" x2="100" y1="60" y2="60" stroke="gray" stroke-linecap="round"/>
-        <line class="browser-line" x1="120" x2="200" y1="60" y2="60" stroke="gray" stroke-linecap="round"/>
+        <line class="browser-line" x1="31" x2="100" y1="55" y2="55" stroke="gray" stroke-linecap="round"/>
+        <line class="browser-line" x1="120" x2="194" y1="55" y2="55" stroke="gray" stroke-linecap="round"/>
     </g>
     <g>
-        <rect width="175" height="125" x="25" y="75" rx="5px" ry="5px" fill="blue"/>
-
+        <rect width="175" height="125" x="25" y="75" rx="5px" ry="5px" fill="skyblue"/>
+        <circle style="fill:#F19F35;" cx="55" cy="105" r="15.995" />
+        <path d="M 25 175 L 75 150 L 125 175 L 175 125 L 200 150 L 200 200 L 25 200" fill="#272727" stroke-linejoin="round"/>
+        <rect width="185" height="135" x="20" y="70" rx="10" ry="10" fill="none" stroke="white" stroke-width="10px"/>
     </g>
     <g>
-        <line class="text-line" x1="30" x2="180" y1="220" y2="220"/>
-        <line class="text-line" x1="30" x2="170" y1="240" y2="240"/>
-        <line class="text-line" x1="30" x2="200" y1="260" y2="260"/>
-        <line class="text-line" x1="30" x2="190" y1="280" y2="280"/>
-        <line class="text-line" x1="30" x2="200" y1="300" y2="300"/>
-        <line class="text-line" x1="30" x2="190" y1="320" y2="320"/>
+        <line class="text-line" x1="28" x2="180" y1="220" y2="220"/>
+        <line class="text-line" x1="28" x2="170" y1="240" y2="240"/>
+        <line class="text-line" x1="28" x2="200" y1="260" y2="260"/>
+        <line class="text-line" x1="28" x2="190" y1="280" y2="280"/>
+        <line class="text-line" x1="28" x2="200" y1="300" y2="300"/>
+        <line class="text-line" x1="28" x2="190" y1="320" y2="320"/>
     </g>
     <g>
         <line class="text-line" x1="250" x2="450" y1="80" y2="80"/>
@@ -79,12 +91,19 @@
         <path class="squiggle" d=" M 305 210 C 315 215 325 215 335 210 C 345 205 355 205 365 210 C 375 215 385 215 395 210 C 405 205 415 205 425 210 C 435 215 445 215 455 210" stroke="#27a751" stroke-width="3" fill="none"/>
     </g>
     <g>
-            <rect class="text-box" width="100" height="75" x="385" y="65" rx="5px" ry="5px" fill-opacity="60%;" fill="gray";/>
+        <rect width="100" height="75" x="385" y="65" rx="5px" ry="5px" fill-opacity="60%" fill="#aaaaaa";>
+            <animate id="box-appear" attributeName="height" from="0" to="75" dur="1s" fill="freeze"/>
+        </rect>
+        <g>
             <text x="390" y="80">
-               Notes 
+                Notes
             </text>
             <text x="390" y="95"> - </text>
             <text x="390" y="110"> - </text>
             <text x="390" y="125"> - </text>
+            <animate attributeName="opacity"
+                values="0;1;" dur="2s">
+            </animate>
+        </g>
     </g>
 </svg>
