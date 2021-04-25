@@ -1,9 +1,27 @@
+/* Header */
+#header {
+    height: 100px;
+}
+
+#title {
+    display: flex;
+    align-items: center;
+
+}
+
+#login-button {
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+}
+
 body {
     background-image: url('/img/background.png'); 
     background-repeat: no-repeat; 
     background-position: 50% 0; 
 }
 
+/* Main Body */
 #main-body {
 }
 
