@@ -52,6 +52,13 @@ body {
 
 #citations-ratings p {
     font-size: large;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#citations-ratings h4 {
+    font-size: xx-large; 
+    font-family: 'Times New Roman', Times, serif;
 }
 
 #rating {
