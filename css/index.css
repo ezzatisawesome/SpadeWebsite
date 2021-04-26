@@ -30,33 +30,40 @@ body {
     align-items: center;
 
     margin-top: 150px;
-    margin-bottom: 300px;
+    margin-bottom: 200px;
 }
 
 #annotations {
     display: flex;
     align-items: center;
 
-    margin-bottom: 300px;
+    margin-bottom: 200px;
 }
 
-#citations {
-    display: flex;
-    align-items: center;
+#annotations h4 {
+    font-size: large;
+}
 
-    margin-bottom: 300px;
+#citations-ratings {
+    display: flex;
+
+    margin-bottom: 200px;
+}
+
+#citations-ratings p {
+    font-size: large;
 }
 
 #rating {
     display: flex;
     align-items: center;
 
-    margin-bottom: 300px;
+    margin-bottom: 200px;
 }
 
 #add-to-chrome {
     justify-content: center;
-    margin-bottom: 300px;
+    margin-bottom: 250px;
 }
 
 #add-to-chrome button {
