@@ -14,25 +14,40 @@
         });
     </script>
     <style>
+        .color1 {
+            color: white;
+        }
+
         #header {
-            height: 100px;
+            height: 80px;
+        }
+        #header h2 {
+            margin: 0;
+            padding: 0;
         }
         #header button {
             width: 100px;
             height: 50px;
             border: none;
             border-radius: 10px;
+            background-color: transparent;
         }
 
-        #main-idea h1 {
-            font-size: 100px;
-        }
         #main-idea {
             height: 700px;
+        }
+        #main-idea h1 {
+            font-size: 100px;
         }
         #main-idea .info {
             margin-top: 10px;
             margin-bottom: 10px;
+        }
+        #main-idea .info p {
+            font-size: x-large;
+        }
+        #main-idea .info div {
+            margin-bottom: 40px;
         }
         #main-idea button {
             background-color: #0067dd;
@@ -45,11 +60,12 @@
         #main-idea button:hover {
             background-color: #0077ff;
         }
-        #main-idea p {
-            font-size: x-large;
-        }
 
         #annotations {
+            background-image: url("img/annotations.svg");
+            background-repeat: no-repeat;
+            background-position: 50%;
+            background-color: black;
             height: 800px;
             width: 100vw;
         }
@@ -57,45 +73,59 @@
             height: 300px;
             border: none;
             border-radius: 20px;
-            background-color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background-color: transparent;
+            display: block;
         }
         #annotations .info p {
-            font-size: x-large;
+            color: white;
+            font-size: xx-large;
         }
         #annotations .info:hover {
-            height: 310px;
+            animation: yolo 1s;
+            animation-fill-mode: forwards;
+        }
+        @keyframes yolo {
+            from {
+                transform: translateY(0%);
+            }
+            to {
+                transform: translateY(-3%);
+            }
         }
 
         #citations {
-            height: 500px;
+            height: 400px;
+        }
+        #citations h2 {
+            font-size: 60px;
         }
         #citations p {
-            font-size: large;
-        }
-        #citations .info {
-            height: 100%;
+            font-size: x-large;
         }
 
         #ratings {
-            height: 500px;
+            height: 400px;
+        }
+        #ratings h2 {
+            font-size: 60px;
         }
         #ratings p {
-            font-size: large;
-        }
-        #ratings .info {
-            height: 100%;
+            font-size: x-large;
         }
 
         #questions {
-            height: 600px;
-            background-color: whitesmoke;
+            height: 800px;
+            background-color: white;
+        }
+        #questions h2 {
+            font-size: 65px;
+            margin-top: 40px;
+            margin-bottom: 40px;
         }
 
         #download {
             height: 400px;
+            background: rgb(56, 56, 255);
         }
         #download p {
             font-size: x-large;
@@ -105,6 +135,8 @@
             height: 50px;
             border: none;
             border-radius: 10px;
+            background-color: rgb(7, 7, 97);
+            color: white;
         }
     </style>
 </head>
@@ -113,19 +145,22 @@
         <div id="header" class="row align-items-center">
             <div class="col-6">
                 <div class="pull-left">
-                    <h2>Spade</h2>
+                    <h2>
+                        <span><img src="img/spade_handle.png" alt="" style="height: 50px;"></span>
+                        Spade
+                    </h2>
                 </div>
             </div>
             <div class="col-6 text-right">
                 <div class="pull-right">
-                    <button class="color1">login</button>
+                    <button>login</button>
                 </div>
             </div>
         </div>
 
-        <div id="main-idea" class="row justify-content-center align-items-center">
+        <div id="main-idea" class="row justify-content-center align-items-center" style="background-color: rgb(56, 56, 255);">
             <div class="col-sm-12 col-md-5 info">
-                <div>
+                <div class="color1">
                     <h1>Research,</h1>
                     <h1>Simplified</h1>
                 </div>
@@ -133,7 +168,7 @@
                     <p>Make your research easy, clear, and confident with Spade.</p>
                 </div>
                 <div>
-                    <button class="color2">Get Spade Now</button>
+                    <button>Get Spade Now</button>
                 </div>
             </div>
             <div class="col-sm-12 col-md-5">
@@ -141,26 +176,28 @@
             </div>
         </div>
 
-        <div id="annotations" class="row justify-content-evenly text-center align-items-center color1">
+        <div id="annotations" class="row justify-content-evenly text-center align-items-center">
                 <div class="col-3 info">
-                    <p>Annotate directly on a webpage</p>
+                    <img src="img/icons/notes.svg" alt="" style="height: 80px;">
+                    <p>Annotate directly on a webpage using a pen, highlighter, and textboxes</p>
                 </div>
                 <div class="col-3 info">
-                    <p>Notes are saved even when you exit a page</p>
+                    <img src="img/icons/cloud.svg" alt="" style="height: 80px;">
+                    <p>Notes are saved to the cloud so they appear even after you exit a page.</p>
                 </div>
                 <div class="col-3 info">
-                    <p>Spade allows you to share your annotations</p>
+                    <img src="img/icons/paper-plane.svg" alt="" style="height: 80px;">
+
+                    <p>Spade allows you to share your annotations with colleagues, peers, and friends.</p>
                 </div>
         </div>
 
-        <div id="citations" class="row justify-content-evenly align-items-center text-center">
+        <div id="citations" class="row justify-content-evenly align-items-center text-center" style="background: rgb(56, 56, 255);">
             <div class="col-md-5">
-                <div style="background-color: lightgray; height: 300px; width: 600px; border-radius: 20px;">
-                    
-                </div>
+
             </div>
             <div class="col-md-5">
-                <div>
+                <div class="color1">
                     <h2>Ready Ratings</h2>
                 </div>
                 <div>
@@ -169,9 +206,9 @@
             </div>
         </div>
 
-        <div id="ratings" class="row justify-content-evenly align-items-center text-center" style="overflow: hidden;">
+        <div id="ratings" class="row justify-content-evenly align-items-center text-center" style="overflow: hidden; background-color: rgb(56, 56, 255);">
             <div class="col-md-5">
-                <div>
+                <div class="color1">
                     <h2>Cool Citations</h2>
                 </div>
                 <div>
@@ -185,10 +222,11 @@
 
         <div id="questions" class="row text-center">
             <h2>Get answers, fast</h2>
+            <img src="img/questions.svg" alt="">
         </div>
 
         <div id="download" class="row text-center align-items-center">
-            <div>
+            <div class="color1">
                 <h1>Understand Your Research</h1>
                 <p>Let Spade work for you.</p>
                 <button>Get started for free</button>
