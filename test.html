@@ -25,16 +25,19 @@
             margin: 0;
             padding: 0;
         }
-        #header button {
+        #header a {
             width: 100px;
             height: 50px;
             border: none;
             border-radius: 10px;
             background-color: transparent;
+            text-decoration: none;
+            color: black;
         }
 
         #main-idea {
             height: 700px;
+            background-color: rgb(121, 136, 198);
         }
         #main-idea h1 {
             font-size: 100px;
@@ -63,7 +66,7 @@
             background-image: url("img/annotations.svg");
             background-repeat: no-repeat;
             background-position: 50%;
-            background-color: black;
+            background-color: rgb(15, 15, 15);
             height: 800px;
             width: 100vw;
         }
@@ -73,16 +76,26 @@
             border-radius: 20px;
             background-color: transparent;
             display: block;
+            animation: in 1s;
+            animation-fill-mode: forwards;
         }
         #annotations .info p {
             color: white;
             font-size: xx-large;
         }
         #annotations .info:hover {
-            animation: yolo 1s;
+            animation: out 1s;
             animation-fill-mode: forwards;
         }
-        @keyframes yolo {
+        @keyframes in {
+            from {
+                transform: translateY(-3%);
+            }
+            in {
+                transform: translateY(0%);
+            }
+        }
+        @keyframes out {
             from {
                 transform: translateY(0%);
             }
@@ -113,7 +126,7 @@
 
         #questions {
             height: 800px;
-            background-color: rgb(0, 0, 0);
+            background-color: rgb(15, 15, 15);
         }
         #questions h2 {
             font-size: 65px;
@@ -123,7 +136,7 @@
 
         #download {
             height: 600px;
-            background: rgb(56, 56, 255);
+            background: rgb(121, 136, 198);
         }
         #download h1 {
             font-size: 80px;
@@ -155,12 +168,12 @@
             </div>
             <div class="col-6 text-right">
                 <div class="pull-right">
-                    <button>login</button>
+                    <a href="login.html">login</a>
                 </div>
             </div>
         </div>
 
-        <div id="main-idea" class="row justify-content-center align-items-center" style="background-color: rgb(56, 56, 255);">
+        <div id="main-idea" class="row justify-content-center align-items-center">
             <div class="col-sm-12 col-md-5 info">
                 <div class="color1">
                     <h1>Research,</h1>
@@ -200,7 +213,7 @@
                 
             </div>
             <div class="col-md-5">
-                <div style="color:rgb(56, 56, 255)">
+                <div style="color: rgb(121, 136, 198);">
                     <h2>Ready Ratings</h2>
                 </div>
                 <div>
@@ -211,7 +224,7 @@
 
         <div id="citations" class="row justify-content-evenly align-items-center text-center" style="overflow: hidden;">
             <div class="col-md-5">
-                <div style="color: rgb(56, 56, 255);">
+                <div style="color: rgb(121, 136, 198);">
                     <h2>Cool Citations</h2>
                 </div>
                 <div>
