@@ -50,15 +50,13 @@
             margin-bottom: 40px;
         }
         #main-idea button {
-            background-color: #0067dd;
-            color: white;
-            width: 200px;
+            width: 250px;
             height: 50px;
             border: none;
-            border-radius: 5px;
-        }
-        #main-idea button:hover {
-            background-color: #0077ff;
+            border-radius: 10px;
+            background-color: white;
+            color: black;
+            font-size: large;
         }
 
         #annotations {
@@ -115,7 +113,7 @@
 
         #questions {
             height: 800px;
-            background-color: white;
+            background-color: rgb(0, 0, 0);
         }
         #questions h2 {
             font-size: 65px;
@@ -124,19 +122,23 @@
         }
 
         #download {
-            height: 400px;
+            height: 600px;
             background: rgb(56, 56, 255);
         }
+        #download h1 {
+            font-size: 80px;
+        }
         #download p {
-            font-size: x-large;
+            font-size: xx-large;
         }
         #download button {
-            width: 300px;
+            width: 250px;
             height: 50px;
             border: none;
             border-radius: 10px;
-            background-color: rgb(7, 7, 97);
-            color: white;
+            background-color: white;
+            color: black;
+            font-size: large;
         }
     </style>
 </head>
@@ -164,7 +166,7 @@
                     <h1>Research,</h1>
                     <h1>Simplified</h1>
                 </div>
-                <div>
+                <div class="color1">
                     <p>Make your research easy, clear, and confident with Spade.</p>
                 </div>
                 <div>
@@ -176,28 +178,29 @@
             </div>
         </div>
 
-        <div id="annotations" class="row justify-content-evenly text-center align-items-center">
-                <div class="col-3 info">
-                    <img src="img/icons/notes.svg" alt="" style="height: 80px;">
-                    <p>Annotate directly on a webpage using a pen, highlighter, and textboxes</p>
-                </div>
-                <div class="col-3 info">
-                    <img src="img/icons/cloud.svg" alt="" style="height: 80px;">
-                    <p>Notes are saved to the cloud so they appear even after you exit a page.</p>
-                </div>
-                <div class="col-3 info">
-                    <img src="img/icons/paper-plane.svg" alt="" style="height: 80px;">
+        <div id="annotations" class="row justify-content-evenly text-center">
+            <h1 style="color: white; font-size: 60px; padding-top: 50px;">Annotations</h1>
+            <div class="col-3 info">
+                <img src="img/icons/notes.svg" alt="" style="height: 80px;">
+                <p>Annotate directly on a webpage using a pen, highlighter, and textboxes</p>
+            </div>
+            <div class="col-3 info">
+                <img src="img/icons/cloud.svg" alt="" style="height: 80px;">
+                <p>Notes are saved to the cloud so they appear even after you exit a page.</p>
+            </div>
+            <div class="col-3 info">
+                <img src="img/icons/paper-plane.svg" alt="" style="height: 80px;">
 
-                    <p>Spade allows you to share your annotations with colleagues, peers, and friends.</p>
-                </div>
+                <p>Spade allows you to share your annotations with colleagues, peers, and friends.</p>
+            </div>
         </div>
 
-        <div id="citations" class="row justify-content-evenly align-items-center text-center" style="background: rgb(56, 56, 255);">
+        <div id="ratings" class="row justify-content-evenly align-items-center text-center">
             <div class="col-md-5">
-
+                
             </div>
             <div class="col-md-5">
-                <div class="color1">
+                <div style="color:rgb(56, 56, 255)">
                     <h2>Ready Ratings</h2>
                 </div>
                 <div>
@@ -206,9 +209,9 @@
             </div>
         </div>
 
-        <div id="ratings" class="row justify-content-evenly align-items-center text-center" style="overflow: hidden; background-color: rgb(56, 56, 255);">
+        <div id="citations" class="row justify-content-evenly align-items-center text-center" style="overflow: hidden;">
             <div class="col-md-5">
-                <div class="color1">
+                <div style="color: rgb(56, 56, 255);">
                     <h2>Cool Citations</h2>
                 </div>
                 <div>
@@ -221,7 +224,7 @@
         </div>
 
         <div id="questions" class="row text-center">
-            <h2>Get answers, fast</h2>
+            <h2 class="color1">Get answers, fast</h2>
             <img src="img/questions.svg" alt="">
         </div>
 
