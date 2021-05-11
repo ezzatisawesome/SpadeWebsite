@@ -61,6 +61,11 @@
             color: black;
             font-size: large;
         }
+        #main-idea img {
+            width: 900px; 
+            box-shadow: 5px 5px 10px 6px rgb(89, 100, 145); 
+            border-radius: 10px;
+        }
 
         #annotations {
             background-image: url("img/annotations.svg");
@@ -72,36 +77,20 @@
         }
         #annotations .info {
             height: 300px;
-            border: none;
-            border-radius: 20px;
-            background-color: transparent;
+            border: 1px white solid;
+            padding: 15px;
+            background-color: white;
+            border-radius: 10px;
             display: block;
-            animation: in 1s;
-            animation-fill-mode: forwards;
-        }
-        #annotations .info p {
-            color: white;
-            font-size: xx-large;
+            transition: transform 500ms;
+            opacity: 80%;
         }
         #annotations .info:hover {
-            animation: out 1s;
-            animation-fill-mode: forwards;
+            transform: translateY(-4%);
         }
-        @keyframes in {
-            from {
-                transform: translateY(-3%);
-            }
-            in {
-                transform: translateY(0%);
-            }
-        }
-        @keyframes out {
-            from {
-                transform: translateY(0%);
-            }
-            to {
-                transform: translateY(-3%);
-            }
+        #annotations .info p {
+            color: black;
+            font-size: xx-large;
         }
 
         #citations {
@@ -112,6 +101,15 @@
         }
         #citations p {
             font-size: x-large;
+        }
+        #citations img {
+            box-shadow: 5px 5px 10px 5px rgb(230, 230, 230);
+            border-radius: 10px;
+            width: 700px;
+            transition: transform 500ms;
+        }
+        #citations img:hover {
+            transform: scale(1.025);
         }
 
         #ratings {
@@ -187,7 +185,7 @@
                 </div>
             </div>
             <div class="col-sm-12 col-md-5">
-                <img src="img/main-idea.svg" alt="" style="width: 900px;">
+                <img src="img/main-idea.svg" alt="">
             </div>
         </div>
 
@@ -210,7 +208,7 @@
 
         <div id="ratings" class="row justify-content-evenly align-items-center text-center">
             <div class="col-md-5">
-                
+                <img src="screen1.png" alt="" style="height: 380px;">
             </div>
             <div class="col-md-5">
                 <div style="color: rgb(121, 136, 198);">
@@ -232,7 +230,7 @@
                 </div>
             </div>
             <div class="col-md-5">
-                <img src="img/citations.svg" alt="" style="width: 700px;">
+                <img src="img/citations.svg" alt="">
             </div>
         </div>
 

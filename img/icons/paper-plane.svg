@@ -1,7 +1,7 @@
 <svg enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg">
     <style>
         .color {
-            fill: white;
+            fill: black;
         }
     </style>>
     <path class="color" d="m8.75 17.612v4.638c0 .324.208.611.516.713.077.025.156.037.234.037.234 0 .46-.11.604-.306l2.713-3.692z" />
