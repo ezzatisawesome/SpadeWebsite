@@ -1,0 +1,133 @@
+.color1 {
+    color: white;
+}
+
+#header {
+    height: 80px;
+}
+#header h2 {
+    margin: 0;
+    padding: 0;
+}
+#header a {
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: transparent;
+    text-decoration: none;
+    color: black;
+}
+
+#main-idea {
+    height: 700px;
+    background-color: rgb(121, 136, 198);
+}
+#main-idea h1 {
+    font-size: 100px;
+}
+#main-idea .info {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#main-idea .info p {
+    font-size: x-large;
+}
+#main-idea .info div {
+    margin-bottom: 40px;
+}
+#main-idea button {
+    width: 250px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    font-size: large;
+}
+#main-idea img {
+    width: 900px; 
+    box-shadow: 5px 5px 10px 6px rgb(89, 100, 145); 
+    border-radius: 10px;
+}
+
+#annotations {
+    background-color: rgb(15, 15, 15);
+    height: 800px;
+    width: 100vw;
+}
+#annotations .info {
+    box-shadow: 7px 7px 20px 2px rgb(22, 22, 22);
+    border-radius: 10px;
+    display: block;
+    transition: transform 500ms;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#annotations .info:hover {
+    transform: translateY(-4%);
+}
+#annotations .info p {
+    color: white;
+    font-size: xx-large;
+}
+
+#citations {
+    height: 400px;
+}
+#citations h2 {
+    font-size: 60px;
+}
+#citations p {
+    font-size: x-large;
+}
+#citations img {
+    box-shadow: 5px 5px 10px 5px rgb(230, 230, 230);
+    border-radius: 10px;
+    width: 700px;
+    transition: transform 500ms;
+}
+#citations img:hover {
+    transform: scale(1.025);
+}
+
+#ratings {
+    height: 400px;
+}
+#ratings h2 {
+    font-size: 60px;
+}
+#ratings p {
+    font-size: x-large;
+}
+
+#questions {
+    height: 800px;
+    background-color: rgb(15, 15, 15);
+}
+#questions h2 {
+    font-size: 65px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#download {
+    height: 600px;
+    background: rgb(121, 136, 198);
+}
+#download h1 {
+    font-size: 80px;
+}
+#download p {
+    font-size: xx-large;
+}
+#download button {
+    width: 250px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    font-size: large;
+}

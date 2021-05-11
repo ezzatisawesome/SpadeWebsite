@@ -1,27 +1,55 @@
 <style>
-    #header {
-        height: 80px;
+    @media only screen and (max-width: 600px) {
+        #header {
+            height: 60px;
+        }
+        #header img {
+            height: 50px;
+        }
+        #header h2 {
+            margin: 0;
+            padding: 0;
+        }
+        #header a {
+            width: 100px;
+            height: 50px;
+            border: none;
+            border-radius: 10px;
+            background-color: transparent;
+            text-decoration: none;
+            color: black;
+        }
     }
-    #header h2 {
-        margin: 0;
-        padding: 0;
+
+    @media only screen and (min-width: 992px) {
+        #header {
+            height: 80px;
+        }
+        #header img {
+            height: 60px;
+        }
+        #header h2 {
+            margin: 0;
+            padding: 0;
+        }
+        #header a {
+            width: 100px;
+            height: 50px;
+            border: none;
+            border-radius: 10px;
+            background-color: transparent;
+            text-decoration: none;
+            color: black;
+        }
     }
-    #header a {
-        width: 100px;
-        height: 50px;
-        border: none;
-        border-radius: 10px;
-        background-color: transparent;
-        text-decoration: none;
-        color: black;
-    }
+    
 </style>
 
 <div id="header" class="row align-items-center">
     <div class="col-6">
         <div class="pull-left">
             <h2>
-                <span><img src="img/spade_handle.png" alt="" style="height: 50px;"></span>
+                <span><img src="img/spade_handle.png" alt=""></span>
                 Spade
             </h2>
         </div>
