@@ -19,19 +19,31 @@
     </script>
     
     <style>
-        #summary {
-            height: 20vh;
-            padding-left: 50px;
+        .color1 {
+            color: white;
         }
 
-        #bio {
+        #mission {
+            padding-top: 35px;
+            background-color: rgb(121, 136, 198);
+            height: 20vh;
+        }
+
+        #aboutus {
+            background-color: rgb(121, 136, 198);
+        }
+
+        #bios {
+            background-color: rgb(121, 136, 198);
             height: 50vh;
             display: flex;
             align-items: center;
         }
-
-        .f-picture {
-            height: 150px;
+        #bios h3 {
+            padding-top: 20px;
+        }
+        #bios img {
+            height: 200px;
 
         }
     </style>
@@ -41,35 +53,38 @@
         <div id="header">
         </div>
 
-        <div class="row" id="summary">
-            <h2>Our Mission</h2>
-            <h4>The Team</h4>
+        <div class="row color1" id="mission">
+            <h1 class="text-center">Our Mission</h1>
+            
+        </div>
+        
+        <div class="row color1 text-center" id="aboutus">
+            <h1>The Team</h1>
             <p>
                 We are highschoolers from Lake Forest Academy.
                 We decided to build this project as part of a hackathon.
             </p>
         </div>
 
-        <div class="row justify-content-between text-center" id="bio">
+        <div class="row justify-content-between text-center color1" id="bios">
             <div class="col-4">
-                <img src="img/f1.png" alt="" class="f-picture">
+                <img src="img/headshots/h1.png" alt="">
                 <h3>Michael Xing</h3>
                 <p>Progammer</p>
             </div>
             <div class="col-4">
-                <img src="img/f2.png" alt="" class="f-picture">
+                <img src="img/headshots/h2.png" alt="">
                 <h3>Bill Le</h3>
                 <p>Programmer</p>
             </div>
             <div class="col-4">
-                <img src="img/f3.png" alt="" class="f-picture">
+                <img src="img/headshots/h3.png" alt="">
                 <h3>Ezzat Suhaime</h3>
                 <p>Programmer</p>
             </div>
         </div>
 
         <div id="footer">
-
         </div>
     </div>
 </body>

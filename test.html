@@ -14,142 +14,287 @@
         });
     </script>
     <style>
-        .color1 {
-            color: white;
-        }
 
-        #header {
-            height: 80px;
-        }
-        #header h2 {
-            margin: 0;
-            padding: 0;
-        }
-        #header a {
-            width: 100px;
-            height: 50px;
-            border: none;
-            border-radius: 10px;
-            background-color: transparent;
-            text-decoration: none;
-            color: black;
-        }
+        @media only screen and (max-width: 600px) {
+            html,body {
+                overflow-x: hidden;
+            }
 
-        #main-idea {
-            height: 700px;
-            background-color: rgb(121, 136, 198);
-        }
-        #main-idea h1 {
-            font-size: 100px;
-        }
-        #main-idea .info {
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-        #main-idea .info p {
-            font-size: x-large;
-        }
-        #main-idea .info div {
-            margin-bottom: 40px;
-        }
-        #main-idea button {
-            width: 250px;
-            height: 50px;
-            border: none;
-            border-radius: 10px;
-            background-color: white;
-            color: black;
-            font-size: large;
-        }
-        #main-idea img {
-            width: 900px; 
-            box-shadow: 5px 5px 10px 6px rgb(89, 100, 145); 
-            border-radius: 10px;
-        }
+            .color1 {
+                color: white;
+            }
 
-        #annotations {
-            background-image: url("img/annotations.svg");
-            background-repeat: no-repeat;
-            background-position: 50%;
-            background-color: rgb(15, 15, 15);
-            height: 800px;
-            width: 100vw;
-        }
-        #annotations .info {
-            height: 300px;
-            border: 1px white solid;
-            padding: 15px;
-            background-color: white;
-            border-radius: 10px;
-            display: block;
-            transition: transform 500ms;
-            opacity: 80%;
-        }
-        #annotations .info:hover {
-            transform: translateY(-4%);
-        }
-        #annotations .info p {
-            color: black;
-            font-size: xx-large;
-        }
+            #header {
+                height: 80px;
+            }
+            #header h2 {
+                margin: 0;
+                padding: 0;
+            }
+            #header a {
+                width: 100px;
+                height: 50px;
+                border: none;
+                border-radius: 10px;
+                background-color: transparent;
+                text-decoration: none;
+                color: black;
+            }
 
-        #citations {
-            height: 400px;
-        }
-        #citations h2 {
-            font-size: 60px;
-        }
-        #citations p {
-            font-size: x-large;
-        }
-        #citations img {
-            box-shadow: 5px 5px 10px 5px rgb(230, 230, 230);
-            border-radius: 10px;
-            width: 700px;
-            transition: transform 500ms;
-        }
-        #citations img:hover {
-            transform: scale(1.025);
-        }
+            #main-idea {
+                height: 700px;
+                background-color: rgb(121, 136, 198);
+                text-align: center;
+            }
+            #main-idea h1 {
+                font-size: 80px;
+            }
+            #main-idea .info {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            #main-idea .info p {
+                font-size: x-large;
+            }
+            #main-idea .info div {
+                margin-bottom: 40px;
+            }
+            #main-idea button {
+                width: 250px;
+                height: 50px;
+                border: none;
+                border-radius: 10px;
+                background-color: white;
+                color: black;
+                font-size: large;
+            }
+            #main-idea img {
+                box-shadow: 2px 2px 5px 2px rgb(89, 100, 145); 
+                border-radius: 10px;
+                width: 90%;
+            }
 
-        #ratings {
-            height: 400px;
-        }
-        #ratings h2 {
-            font-size: 60px;
-        }
-        #ratings p {
-            font-size: x-large;
-        }
+            #annotations {
+                background-image: url("img/annotations.svg");
+                background-repeat: no-repeat;
+                background-position: 50%;
+                background-color: rgb(15, 15, 15);
+                height: 800px;
+            }
+            #annotations .info {
+                height: 300px;
+                padding: 15px;
+                border-radius: 10px;
+                display: block;
+                transition: transform 500ms;
+            }
+            #annotations .info:hover {
+                transform: translateY(-4%);
+            }
+            #annotations .info p {
+                color: white;
+                font-size: xx-large;
+            }
 
-        #questions {
-            height: 800px;
-            background-color: rgb(15, 15, 15);
-        }
-        #questions h2 {
-            font-size: 65px;
-            margin-top: 40px;
-            margin-bottom: 40px;
-        }
+            #citations {
+                height: 400px;
+            }
+            #citations h2 {
+                font-size: 60px;
+            }
+            #citations p {
+                font-size: x-large;
+            }
+            #citations img {
+                box-shadow: 5px 5px 10px 5px rgb(230, 230, 230);
+                border-radius: 10px;
+                transition: transform 500ms;
+                width: 700px;
+            }
+            #citations img:hover {
+                transform: scale(1.025);
+            }
 
-        #download {
-            height: 600px;
-            background: rgb(121, 136, 198);
+            #ratings {
+                height: 400px;
+            }
+            #ratings h2 {
+                font-size: 60px;
+            }
+            #ratings p {
+                font-size: x-large;
+            }
+
+            #questions {
+                height: 800px;
+                background-color: rgb(15, 15, 15);
+            }
+            #questions h2 {
+                font-size: 65px;
+                margin-top: 40px;
+                margin-bottom: 40px;
+            }
+
+            #download {
+                height: 600px;
+                background: rgb(121, 136, 198);
+            }
+            #download h1 {
+                font-size: 80px;
+            }
+            #download p {
+                font-size: xx-large;
+            }
+            #download button {
+                width: 250px;
+                height: 50px;
+                border: none;
+                border-radius: 10px;
+                background-color: white;
+                color: black;
+                font-size: large;
+            }
         }
-        #download h1 {
-            font-size: 80px;
-        }
-        #download p {
-            font-size: xx-large;
-        }
-        #download button {
-            width: 250px;
-            height: 50px;
-            border: none;
-            border-radius: 10px;
-            background-color: white;
-            color: black;
-            font-size: large;
+        
+
+        @media only screen and (min-width: 992px) { 
+            html,body {
+                overflow-x: hidden;
+            }
+
+            .color1 {
+                color: white;
+            }
+
+            #header {
+                height: 80px;
+            }
+            #header h2 {
+                margin: 0;
+                padding: 0;
+            }
+            #header a {
+                width: 100px;
+                height: 50px;
+                border: none;
+                border-radius: 10px;
+                background-color: transparent;
+                text-decoration: none;
+                color: black;
+            }
+
+            #main-idea {
+                height: 700px;
+                background-color: rgb(121, 136, 198);
+            }
+            #main-idea h1 {
+                font-size: 100px;
+            }
+            #main-idea .info {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            #main-idea .info p {
+                font-size: x-large;
+            }
+            #main-idea .info div {
+                margin-bottom: 40px;
+            }
+            #main-idea button {
+                width: 250px;
+                height: 50px;
+                border: none;
+                border-radius: 10px;
+                background-color: white;
+                color: black;
+                font-size: large;
+            }
+            #main-idea img {
+                box-shadow: 5px 5px 10px 6px rgb(89, 100, 145); 
+                border-radius: 10px;
+                width: 900px;
+            }
+
+            #annotations {
+                background-image: url("img/annotations.svg");
+                background-repeat: no-repeat;
+                background-position: 50%;
+                background-color: rgb(15, 15, 15);
+                height: 800px;
+            }
+            #annotations .info {
+                height: 300px;
+                padding: 15px;
+                border-radius: 10px;
+                display: block;
+                transition: transform 500ms;
+            }
+            #annotations .info:hover {
+                transform: translateY(-4%);
+            }
+            #annotations .info p {
+                color: white;
+                font-size: xx-large;
+            }
+
+            #citations {
+                height: 400px;
+            }
+            #citations h2 {
+                font-size: 60px;
+            }
+            #citations p {
+                font-size: x-large;
+            }
+            #citations img {
+                box-shadow: 5px 5px 10px 5px rgb(230, 230, 230);
+                border-radius: 10px;
+                transition: transform 500ms;
+                width: 700px;
+            }
+            #citations img:hover {
+                transform: scale(1.025);
+            }
+
+            #ratings {
+                height: 400px;
+            }
+            #ratings h2 {
+                font-size: 60px;
+            }
+            #ratings p {
+                font-size: x-large;
+            }
+
+            #questions {
+                height: 800px;
+                background-color: rgb(15, 15, 15);
+            }
+            #questions h2 {
+                font-size: 65px;
+                margin-top: 40px;
+                margin-bottom: 40px;
+            }
+
+            #download {
+                height: 600px;
+                background: rgb(121, 136, 198);
+            }
+            #download h1 {
+                font-size: 80px;
+            }
+            #download p {
+                font-size: xx-large;
+            }
+            #download button {
+                width: 250px;
+                height: 50px;
+                border: none;
+                border-radius: 10px;
+                background-color: white;
+                color: black;
+                font-size: large;
+            }
         }
     </style>
 </head>
@@ -171,8 +316,8 @@
             </div>
         </div>
 
-        <div id="main-idea" class="row justify-content-center align-items-center">
-            <div class="col-sm-12 col-md-5 info">
+        <div id="main-idea" class="row justify-content-around align-items-center" style="overflow: hidden;">
+            <div class="col-sm-12 col-md-7 info">
                 <div class="color1">
                     <h1>Research,</h1>
                     <h1>Simplified</h1>
@@ -184,7 +329,7 @@
                     <button>Get Spade Now</button>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-5">
+            <div class="col-sm-12 col-md-4">
                 <img src="img/main-idea.svg" alt="">
             </div>
         </div>
@@ -207,10 +352,9 @@
         </div>
 
         <div id="ratings" class="row justify-content-evenly align-items-center text-center">
-            <div class="col-md-5">
-                <img src="screen1.png" alt="" style="height: 380px;">
+            <div class="col-md-5 col-sm-12">
             </div>
-            <div class="col-md-5">
+            <div class="col-md-5 col-sm-12">
                 <div style="color: rgb(121, 136, 198);">
                     <h2>Ready Ratings</h2>
                 </div>
@@ -221,7 +365,7 @@
         </div>
 
         <div id="citations" class="row justify-content-evenly align-items-center text-center" style="overflow: hidden;">
-            <div class="col-md-5">
+            <div class="col-md-5 col-sm-12">
                 <div style="color: rgb(121, 136, 198);">
                     <h2>Cool Citations</h2>
                 </div>
@@ -229,7 +373,7 @@
                     <p>Spade automatically cites webpages.</p>
                 </div>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-5 col-sm-12">
                 <img src="img/citations.svg" alt="">
             </div>
         </div>
