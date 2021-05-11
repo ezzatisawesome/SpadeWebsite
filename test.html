@@ -73,19 +73,26 @@
             background-repeat: no-repeat;
             background-position: 50%;
             background-color: rgb(15, 15, 15);
-            height: 800px;
             width: 100vw;
+            padding-top:100px;
+            padding-bottom:100px;
+            background-size:cover
         }
         #annotations .info {
             height: 400px;
-            border: 3px white dashed;
+/*             border: 3px white dashed; */
             padding: 15px;
-            backdrop-filter: blur(20px);
-
+/*             backdrop-filter: blur(20px); */
+            
             color:white;
             border-radius: 10px;
             display: block;
             transition: transform 500ms;
+        }
+        @media screen and (max-width:1023px){
+            #annotations .info {
+                width:100%
+            }
         }
       
         #annotations .info:hover {
@@ -98,6 +105,21 @@
 
         #citations {
             height: 400px;
+        }
+
+        @media screen and (max-width:500px)
+        {
+
+            #citations{
+                height:auto;
+                padding-top:30px;
+                padding-bottom:20px
+            }
+            #ratings{
+                height:auto;
+                padding-top:30px;
+                padding-bottom:20px
+            }
         }
         #citations h2 {
             font-size: 60px;
@@ -193,7 +215,7 @@
         </div>
 
         <div id="annotations" class="row justify-content-evenly text-center">
-            <h1 style="color: white; font-size: 60px; padding-top: 50px;">Annotations</h1>
+            <h1 style="color: white; font-size: 60px; ">Annotations</h1>
             <div class="col-3 info">
                 <img src="img/icons/notes.svg" alt="" style="height: 60%;">
                 <h2>Annotate directly</h2>
