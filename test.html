@@ -41,7 +41,7 @@
             background-color: rgb(121, 136, 198);
         }
         #main-idea h1 {
-            font-size: 100px;
+            font-size: 80px;
         }
         #main-idea .info {
             margin-top: 10px;
@@ -136,7 +136,16 @@
         #citations img:hover {
             transform: scale(1.025);
         }
-
+@media screen and (max-width:767px) {
+    #main-idea{
+        height:auto;
+        padding-top:50px;
+        padding-bottom:50px
+    }
+    #main-idea img{
+        width:100%;
+    }
+}
         #ratings {
             height: 400px;
         }
@@ -156,13 +165,27 @@
             margin-top: 40px;
             margin-bottom: 40px;
         }
+        *,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body
+{
 
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
         #download {
-            height: 400px;
+            padding-top:100px;
+            padding-bottom:100px;
             background: rgb(121, 136, 198);
         }
         #download h1 {
-            font-size: 80px;
+            font-size: 60px;
         }
         #download p {
             font-size: xx-large;
@@ -196,7 +219,7 @@
             </div>
         </div>
 
-        <div id="main-idea" class="row justify-content-center align-items-center" style="overflow:hidden">
+        <div id="main-idea" class="row" style="overflow:hidden;display:flex;justify-content: space-around;align-items: center;">
             <div class="col-sm-12 col-md-5 info">
                 <div class="color1">
                     <h1>Research,</h1>
@@ -232,7 +255,7 @@
                 <p> with colleagues, peers, and friends for reference.</p>
             </div>
         </div>
-
+<div id="left-right">
         <div id="ratings" class="row justify-content-evenly align-items-center text-center">
             <div class="col-md-5">
 <!--                 <img src="screen3.png" alt="" style="height: 380px;">
@@ -259,7 +282,7 @@
             <div class="col-md-5">
                 <img src="img/citations.svg" alt="">
             </div>
-        </div>
+        </div></div>
 
         <div id="questions" class="row text-center">
             <h2 class="color1">Get answers, fast</h2>

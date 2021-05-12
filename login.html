@@ -14,23 +14,31 @@
 
 <style>
     body {
-        background-image: url('img/background-1.png');
-    }
+        background-color: rgb(121, 136, 198);    }
 
-    #title {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        height: 100px;
-        text-decoration: none;
-        color: black;
-    }
+    #header {
+            height: 80px;
+            background-color: white;
+        }
+        #header h2 {
+            margin: 0;
+            padding: 0;
+        }
+        #header a {
+            width: 100px;
+            height: 50px;
+            border: none;
+            border-radius: 10px;
+            background-color: transparent;
+            text-decoration: none;
+            color: black;
+        }
 
     #main-body {
         display: flex;
         align-content: center;
         justify-content: center;
-        height: 70vh;
+        height: 80vh
     }
 
     #signin-panel {
@@ -38,7 +46,7 @@
         height: 400px;
         width: 400px;
         border-radius: 20px;
-        box-shadow: 1px 1px 20px 3px rgb(238, 238, 238);
+        /* box-shadow: 1px 1px 20px 3px rgb(238, 238, 238); */
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -108,8 +116,17 @@
 
 <body>
     <div class="container-fluid">
-        <div class="row">
-            <a href="index.html" id="title"><h3>Spade</h3></a>
+        <div id="header" class="row align-items-center">
+            <div class="col-6">
+                
+                <div class="pull-left">
+                    <h2>
+                        <span><img src="img/spade_handle.png" alt="" style="height: 50px;"></span>
+                        Spade
+                    </h2>
+                </div>
+            </div>
+
         </div>
 
         <div class="row" id="main-body">
