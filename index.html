@@ -15,6 +15,21 @@
             $("#footer").load("common/footer.html").addClass("row justify-content-evenly text-center")
         });
     </script>
+    <style>
+        @media only screen and (max-width: 600px) {
+            #annotations {
+                background-image: url('img/annotations_small.svg');
+            }
+        }
+        @media only screen and (min-width: 600px) {
+            
+        }
+        @media only screen and (min-width: 992px) {
+            #annotations {
+                background-image: url('img/annotations.svg');
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container-fluid">
@@ -40,7 +55,7 @@
             </div>
         </div>
 
-        <div id="annotations" class="row justify-content-evenly text-center" style="background-image: url('img/annotations.svg');">
+        <div id="annotations" class="row justify-content-evenly text-center">
             <h1>Annotations</h1>
             <div class="col-sm-12 col-md-3 info">
                 <img src="img/icons/notes.svg" alt="" style="height: 80px;">
