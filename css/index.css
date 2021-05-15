@@ -16,6 +16,7 @@
         margin-top: 10px;
         margin-bottom: 10px;
     }
+
     #main-idea .info p {
         font-size: x-large;
     }
@@ -42,8 +43,10 @@
         background-color: rgb(15, 15, 15);
         background-repeat: no-repeat;
         background-position: center;
-        height: auto;
-        color: white;
+        height: auto;        color:white;
+
+        
+        
     }
     #annotations h1 {
         font-size: 55px;
@@ -101,11 +104,13 @@
         height: auto;
         color: white;
         background-color: rgb(15, 15, 15);
+        color:white
     }
     #questions h2 {
         font-size: 55px;
         margin-top: 40px;
         margin-bottom: 40px;
+        color:white
     }
 
     #download {
@@ -181,7 +186,10 @@
         background-repeat: no-repeat;
         background-position: 50%;
         background-color: rgb(15, 15, 15);
-        height: 800px;
+        width: 100vw;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background-size: cover;
     }
     #annotations p {
         font-size: x-large;
@@ -204,7 +212,7 @@
     }
     #annotations .info p {
         color: white;
-        font-size: xx-large;
+        font-size:1rem
     }
 
     #citations {
@@ -260,7 +268,6 @@
     }
     #questions p {
         font-size: x-large;
-        color: white;
     }
     #questions img {
         width: 100vw;
