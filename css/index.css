@@ -5,14 +5,14 @@
 
     #main-idea {
         height: auto;
-        background-color: rgb(121, 136, 198);
         text-align: center;
         color: white;
+        background-color: rgb(121, 136, 198);
     }
     #main-idea h1 {
         font-size: 80px;
     }
-    #main-idea .info {
+    #main-idea {
         margin-top: 10px;
         margin-bottom: 10px;
     }
@@ -28,25 +28,23 @@
         height: 50px;
         border: none;
         border-radius: 10px;
-        background-color: white;
-        color: black;
         font-size: large;
+        color: black;
+        background-color: white;
     }
     #main-idea img {
-        box-shadow: 2px 2px 5px 2px rgb(89, 100, 145); 
-        border-radius: 10px;
         width: 100%;
         margin-bottom: 15px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px 2px rgb(89, 100, 145); 
     }
 
     #annotations {
+        height: auto;        
+        color:rgb(131, 128, 128);
         background-color: rgb(15, 15, 15);
         background-repeat: no-repeat;
         background-position: center;
-        height: auto;        color:white;
-
-        
-        
     }
     #annotations h1 {
         font-size: 55px;
@@ -80,7 +78,7 @@
         box-shadow: 5px 5px 10px 5px rgb(230, 230, 230);
         border-radius: 10px;
         transition: transform 500ms;
-        width: 95%;
+        width: 100%;
     }
     #citations img:hover {
         transform: scale(1.025);
@@ -139,9 +137,197 @@
     }
 }
 
+
+
+
+
+
+
 @media only screen and (min-width: 600px) {
-    
+    html, body {
+        overflow-x: hidden;
+    }
+
+    #main-idea {
+        color: white;
+        height: auto;
+        background-color: rgb(121, 136, 198);
+    }
+    #main-idea h1 {
+        font-size: 100px;
+    }
+    #main-idea .info {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    #main-idea .info p {
+        font-size: x-large;
+    }
+    #main-idea .info div {
+        margin-bottom: 40px;
+    }
+    #main-idea button {
+        width: 250px;
+        height: 50px;
+        border: none;
+        border-radius: 10px;
+        background-color: white;
+        color: black;
+        font-size: large;
+    }
+    #main-idea img {
+        margin-bottom: 20px;
+        box-shadow: 5px 5px 10px 6px rgb(89, 100, 145); 
+        border-radius: 10px;
+        width: 100%;
+    }
+
+    #annotations {
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-color: rgb(15, 15, 15);
+        width: 100vw;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background-size: cover;
+    }
+    #annotations p {
+        font-size: x-large;
+        color: whitesmoke;
+    }
+    #annotations h1 {
+        color: white;
+        margin-top: 50px;
+        font-size: 60px;
+    }
+    #annotations .info {
+        height: 300px;
+        padding: 15px;
+        border-radius: 10px;
+        display: block;
+        transition: transform 500ms;
+    }
+    #annotations .info:hover {
+        transform: translateY(-4%);
+    }
+    #annotations .info p {
+        color: white;
+        font-size:1rem
+    }
+
+    #citations {
+        height: 400px;
+    }
+    #citations h2 {
+        font-size: 60px;
+    }
+    #citations p {
+        font-size: large;
+    }
+    #citations img {
+        box-shadow: 5px 5px 10px 5px rgb(230, 230, 230);
+        border-radius: 10px;
+        transition: transform 500ms;
+        width: 100%;
+    }
+    #citations img:hover {
+        transform: scale(1.025);
+    }
+
+    #ratings {
+        height: 400px;
+    }
+    #ratings h2 {
+        font-size: 60px;
+    }
+    #ratings p {
+        font-size: large;
+    }
+    #ratings .image-holder {
+        text-align: center;
+    }
+    #ratings img {
+        width: 80%;
+        margin-top: 30px;
+        transition: transform 500ms;
+    }
+    #ratings img:hover {
+        transform: scale(1.025);
+    }
+
+    #questions {
+        height: auto;
+        color: white;
+        background-color: rgb(15, 15, 15);
+        display: flex;
+        justify-content: center;
+    }
+    #questions h2 {
+        font-size: 65px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        color: white;
+    }
+    #questions p {
+        font-size: x-large;
+    }
+    #questions img {
+        width: 100vw;
+        margin-bottom: 20px;
+    }
+
+    #download {
+        color: white;
+        height: 500px;
+        background: rgb(121, 136, 198);
+    }
+    #download h1 {
+        font-size: 70px;
+    }
+    #download p {
+        font-size: xx-large;
+    }
+    #download button {
+        width: 250px;
+        height: 50px;
+        border: none;
+        border-radius: 10px;
+        background-color: white;
+        color: black;
+        font-size: large;
+    }
 }
+
+
+
+
+
+
+
+@media only screen and (min-width: 768px) {
+    #main-idea h1 {
+        font-size: 80px;
+    }
+    #main-idea img {
+        margin-bottom: 20px;
+        box-shadow: 5px 5px 10px 6px rgb(89, 100, 145); 
+        border-radius: 10px;
+        width: 700px;
+    }
+
+    #citations img {
+        width: 600px;
+    }
+
+    #ratings img {
+        width: 110%;
+    }
+}
+
+
+
+
+
 
 
 @media only screen and (min-width: 992px) { 
@@ -256,6 +442,7 @@
 
     #questions {
         height: auto;
+        color: white;
         background-color: rgb(15, 15, 15);
         display: flex;
         justify-content: center;
