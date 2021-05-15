@@ -7,23 +7,6 @@
         color: white;
     }
 
-    #header {
-        height: 80px;
-    }
-    #header h2 {
-        margin: 0;
-        padding: 0;
-    }
-    #header a {
-        width: 100px;
-        height: 50px;
-        border: none;
-        border-radius: 10px;
-        background-color: transparent;
-        text-decoration: none;
-        color: black;
-    }
-
     #main-idea {
         height: auto;
         background-color: rgb(121, 136, 198);
@@ -203,6 +186,10 @@
         background-color: rgb(15, 15, 15);
         height: 800px;
     }
+    #annotations p {
+        font-size: x-large;
+        color: whitesmoke;
+    }
     #annotations h1 {
         color: white;
         margin-top: 50px;
@@ -236,7 +223,7 @@
         box-shadow: 5px 5px 10px 5px rgb(230, 230, 230);
         border-radius: 10px;
         transition: transform 500ms;
-        width: 700px;
+        width: 800px;
     }
     #citations img:hover {
         transform: scale(1.025);
@@ -265,15 +252,25 @@
     #questions {
         height: auto;
         background-color: rgb(15, 15, 15);
+        display: flex;
+        justify-content: center;
     }
     #questions h2 {
         font-size: 65px;
         margin-top: 40px;
         margin-bottom: 40px;
+        color: white;
+    }
+    #questions p {
+        font-size: x-large;
+        color: white;
+    }
+    #questions img {
+        width: 80%;
     }
 
     #download {
-        height: 600px;
+        height: 500px;
         background: rgb(121, 136, 198);
     }
     #download h1 {
