@@ -1,0 +1,137 @@
+@media only screen and (max-width: 600px) {
+    html, body {
+        overflow-x: hidden;
+    }
+
+    #main-idea {
+        color: white;
+        background: rgb(121, 136, 198);
+        text-align: center;
+        height: auto;
+    }
+    #main-idea h1 {
+        font-size: 70px;
+    }
+    #main-idea div {
+        font-size: x-large;
+    }
+    #main-idea button {
+        color: black;
+        background-color: white;
+        border: none;
+        border-radius: 10px;
+        width: 250px;
+        height: 50px;
+        font-size: large;
+        margin-bottom: 15px;
+    }
+    #main-idea img {
+        box-shadow: 2px 2px 5px 2px rgb(89, 100, 145); 
+        border-radius: 10px;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    #annotations {
+        color: white;
+        background-color: rgb(15, 15, 15);
+        background-repeat: no-repeat;
+        background-position: center;
+        height: auto;
+    }
+    #annotations h2 {
+        font-size: 55px;
+    }
+    #annotations .info {
+        height: 300px;
+        padding: 15px;
+        border-radius: block;
+        transition: transform 500ms;
+    }
+    #annotations .info img {
+        height: 80px;
+    }
+    #annotations .info:hover {
+        transform:translateY(-4%)
+    }
+    #annotations .info p {
+        font-size: x-large;
+    }
+
+    #ratings {
+        height: auto;
+        text-align: center;
+        margin-top: 15px;
+    }
+    #ratings h2 {
+        font-size: 55px;
+    }
+    #ratings p {
+        font-size: large;
+    }
+    #ratings img {
+        width: 100%;
+        transition: transform 500ms;
+    }
+    #ratings img:hover {
+        transform: scale(1.025);
+    }
+
+    #citations {
+        height: auto;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    #citations h2 {
+        font-size: 55px;
+    }
+    #citations p {
+        font-size: large;
+    }
+    #citations img {
+        box-shadow: 5px 5px 10px 5px rgb(230, 230, 230);
+        border-radius: 10px;
+        width: 100%;
+        transition: transform 500ms;
+    }
+    #citations img:hover {
+        transform: scale(1.025);
+    }
+    
+    #questions {
+        color: white;
+        background-color: rgb(15, 15, 15);
+        height: auto;
+    }
+    #questions h2 {
+        font-size: 55px;
+    }
+    #questions p {
+        font-size: large;
+    }
+    #questions img {
+        width: 100%;
+    }
+
+    #download {
+        color: white;
+        background-color: rgb(121, 136, 198);
+        height: 500px;
+    }
+    #download h1 {
+        font-size: 59px;
+    }
+    #download p {
+        font-size: xx-large;
+    }
+    #download button {
+        color: black;
+        background-color: white;
+        border: none;
+        border-radius: 10px;
+        width: 250px;
+        height: 50px;
+        font-size: large;
+        margin-bottom: 15px;
+    }
+}

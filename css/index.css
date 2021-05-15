@@ -3,14 +3,11 @@
         overflow-x: hidden;
     }
 
-    .color1 {
-        color: white;
-    }
-
     #main-idea {
         height: auto;
         background-color: rgb(121, 136, 198);
         text-align: center;
+        color: white;
     }
     #main-idea h1 {
         font-size: 80px;
@@ -46,9 +43,9 @@
         background-repeat: no-repeat;
         background-position: center;
         height: auto;
+        color: white;
     }
     #annotations h1 {
-        color: white;
         font-size: 55px;
     }
     #annotations .info {
@@ -62,14 +59,13 @@
         transform: translateY(-4%);
     }
     #annotations .info p {
-        color: white;
         font-size: x-large;
     }
 
     #citations {
         height: auto;
         margin-top: 15px;
-        margin-bottom: 15px
+        margin-bottom: 15px;
     }
     #citations h2 {
         font-size: 55px;
@@ -90,7 +86,9 @@
     #ratings {
         height: auto;
         margin-top: 15px;
-        margin-bottom: 15px
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: center;
     }
     #ratings h2 {
         font-size: 55px;
@@ -101,6 +99,7 @@
 
     #questions {
         height: auto;
+        color: white;
         background-color: rgb(15, 15, 15);
     }
     #questions h2 {
@@ -112,6 +111,7 @@
     #download {
         height: 600px;
         background: rgb(121, 136, 198);
+        color: white;
     }
     #download h1 {
         font-size: 65px;
@@ -144,11 +144,8 @@
         overflow-x: hidden;
     }
 
-    .color1 {
-        color: white;
-    }
-
     #main-idea {
+        color: white;
         height: 700px;
         background-color: rgb(121, 136, 198);
     }
@@ -239,7 +236,7 @@
         font-size: x-large;
     }
     #ratings img {
-        width: 120%;
+        width: 110%;
         margin-top: 30px;
         position: relative;
         left: -50px;
@@ -266,10 +263,12 @@
         color: white;
     }
     #questions img {
-        width: 80%;
+        width: 100vw;
+        margin-bottom: 20px;
     }
 
     #download {
+        color: white;
         height: 500px;
         background: rgb(121, 136, 198);
     }
