@@ -1,22 +1,22 @@
 let user = JSON.parse(result.user).id;
-            let request = new XMLHttpRequest();
-            request.onreadystatechange = function(){
-                if(request.readyState == 4 && request.status == 200){
-                    let data = JSON.parse(request.response).annotations;
-                    let elem = document.getElementsByClassName("list-annotations")[0]
-                    elem.innerHTML = "";
-                    for(let i = 0; i < data.length; i++){
-                        elem.innerHTML += `
-                            <div style="display:flex;width:100%"><div style="border-radius:50%;background:hsl(236, 50%, 52%);color:white;width:25px;height:25px;display:flex;justify-content:center;margin-right:7px">${i+1}</div><a href="${data[i]["link"]}" class="list-annotations-links">${data[i]["link"].substr(0,30)}</a>
-                        </div>`;
-                    }
-                    for(let a of document.getElementsByClassName('list-annotations-links')){
-                        a.addEventListener("click", function(event){
-                            window.open(event.target.innerHTML);
-                        })
-                    }
-                }
-            }
+let request = new XMLHttpRequest();
+request.onreadystatechange = function(){
+    if(request.readyState == 4 && request.status == 200){
+        let data = JSON.parse(request.response).annotations;
+        let elem = document.getElementsByClassName("list-annotations")[0]
+        elem.innerHTML = "";
+        for(let i = 0; i < data.length; i++){
+            elem.innerHTML += `
+                <div style="display:flex;width:100%"><div style="border-radius:50%;background:hsl(236, 50%, 52%);color:white;width:25px;height:25px;display:flex;justify-content:center;margin-right:7px">${i+1}</div><a href="${data[i]["link"]}" class="list-annotations-links">${data[i]["link"].substr(0,30)}</a>
+            </div>`;
+        }
+        for(let a of document.getElementsByClassName('list-annotations-links')){
+            a.addEventListener("click", function(event){
+                window.open(event.target.innerHTML);
+            })
+        }
+    }
+}
 
 function logedIn(){
     chrome.storage.local.get(["user"], function(result){
@@ -60,3 +60,47 @@ function logedIn(){
         }
     })
 }
+
+document.getElementById("createUser").addEventListener("click", function(){
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function(){
+        if(request.readyState == 4 && request.status == 200){
+            if(request.responseText == "Email already used!"){
+                document.getElementById("signInError").innerHTML = "Email already used!";
+            } else if (request.responseText == "User already exists!"){
+                document.getElementById("logInError").innerHTML = "User already exists!";
+            } else {
+                chrome.storage.local.set({user: request.response})
+                logedIn();
+            }
+        }
+    }
+    request.open("POST", "http://localhost:5000/auth/createUser", true);
+    request.setRequestHeader('Content-Type', 'application/json');
+    
+    request.send(JSON.stringify({
+        "user": document.getElementsByName("username-signIn")[0].value,
+        "password": document.getElementsByName("password-signIn")[0].value,
+        "email": document.getElementsByName("email")[0].value
+    }));
+})
+
+document.getElementById("logInButton").addEventListener("click", function(){
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function(){
+        if(request.readyState == 4 && request.status == 200){
+            if(request.responseText == "Failed"){
+                document.getElementById("logInError").innerHTML = "Invalid username or password!"
+            } else {
+                chrome.storage.local.set({user: request.response})
+                logedIn();
+            }
+        }
+    }
+    request.open("POST", "http://localhost:5000/auth/login", true);
+    request.setRequestHeader('Content-Type', 'application/json');
+    request.send(JSON.stringify({
+        "user": document.getElementsByName("username")[0].value,
+        "password": document.getElementsByName("password")[0].value,
+    }));
+})
