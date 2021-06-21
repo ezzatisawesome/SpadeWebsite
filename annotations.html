@@ -17,32 +17,85 @@
                 let r = new XMLHttpRequest()
                 r.onreadystatechange = () => {
                     if(r.readyState==4 && r.status==200){
-                        let data = JSON.parse(r.response).annotations;
-                        let elem = document.getElementsByClassName("list-annotations")[0]
-                        elem.innerHTML = "";
-                        for(let i = 0; i < data.length; i++){
-                            elem.innerHTML += `
-                                <div style="display:flex;width:100%"><div style="border-radius:50%;background:hsl(236, 50%, 52%);color:white;width:25px;height:25px;display:flex;justify-content:center;margin-right:7px">${i+1}</div><a href="${data[i]["link"]}" class="list-annotations-links">${data[i]["link"].substr(0,30)}</a>
-                            </div>`;
-                        }
-                        for(let a of document.getElementsByClassName('list-annotations-links')){
-                            a.addEventListener("click", function(event){
-                                window.open(event.target.innerHTML);
-                            })
+                        let data = JSON.parse(r.response).annotations
+                        for(let i=0; i<data.length; i++) {
+                            console.log(data[i]["link"])
+                            $("#b").append(
+                                `<div class="col-md-3">
+                                    <iframe src="${data[i]["link"]}"></iframe>
+                                    <a href="${data[i]["link"]}">
+                                        ${data[i]["link"].substr(0,30)}
+                                    </a>
+                                </div>`)
                         }
                     }
                 }
-                r.open("GET", "http://localhost:5000/list-annotations", true);
-                r.setRequestHeader("Content-Type", "application/json");
-                r.setRequestHeader("Authorization", "Bearer " +user)
+                r.open("GET", "http://localhost:5000/list-annotations", true)
+                r.setRequestHeader("Content-Type", "application/json")
+                r.setRequestHeader("Authorization", "Bearer " + user)
                 r.send(null)
             }
         })
     </script>
+    <style>
+        #h {
+            height: 150px;
+            background-color: #2E2C2F;
+        }
+        #h h3, h4 {
+            color: #ffffff;
+        }
+        #logo {
+            display: flex;
+            align-items: center;
+        }
+        #logo img {
+            height: 50px;
+            margin-right: 6px;
+        }
+        #search-container {
+        }
+        #search {
+            height: 30px;
+            width: 97%;
+            border-radius: 30px;
+            border: none;
+            
+        }
+
+        #b {
+            display: flex;
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
-    <div class="list-annotations">
+    <div class="container-fluid">
 
+        <div class="row" id="h">
+            <div class="row">
+                <div class="col-2" id="logo">
+                    <img src="spade_handle_transparent.png" alt="">
+                    <h3>spade</h3>
+                </div>
+                <div class="col-3">
+                    <h4>Account</h4>
+                </div>
+                <div class="col-3">
+                    <h4>Premium</h4>
+                </div>
+                <div class="col-3">
+    
+                </div>
+            </div>
+            <div class="row" id="search_container">
+                <input type="text" placeholder="Search..." id="search">
+            </div>
+        </div>
+
+        <div class="row" id="b">
+            
+        </div>
     </div>
 </body>
 </html>
