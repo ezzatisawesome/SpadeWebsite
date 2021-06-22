@@ -11,34 +11,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Lato:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <script src="jquery.js"></script>
     <script>
-        $(document).ready(() => {
             f = localStorage.getItem("user")
             if(f == undefined) {
                 $(location).attr("href", "signin.html")
             } else {
-                let user = JSON.parse(f).id
-                let r = new XMLHttpRequest()
-                r.onreadystatechange = () => {
-                    if(r.readyState==4 && r.status==200){
-                        let data = JSON.parse(r.response).annotations
-                        for(let i=0; i<data.length; i++) {
-                            console.log(data[i]["link"])
-                            $("#b").append(
-                                `<div class="col-3 pg">
-                                    <iframe src="${data[i]["link"]}"></iframe>
-                                    <a href="${data[i]["link"]}" target="_blank">
-                                        ${data[i]["link"].substr(0,28)}
-                                    </a>
-                                </div>`)
+                $(document).ready(() => {
+                    let user = JSON.parse(f).id
+                    let r = new XMLHttpRequest()
+                    r.onreadystatechange = () => {
+                        if(r.readyState==4 && r.status==200){
+                            let data = JSON.parse(r.response).annotations
+                            for(let i=0; i<data.length; i++) {
+                                console.log(data[i]["link"])
+                                $("#b").append(
+                                    `<div class="col-3 pg">
+                                        <iframe src="${data[i]["link"]}"></iframe>
+                                        <a href="${data[i]["link"]}" target="_blank">
+                                            ${data[i]["link"].substr(0,28)}
+                                        </a>
+                                    </div>`)
+                            }
                         }
                     }
-                }
-                r.open("GET", "http://localhost:5000/list-annotations", true)
-                r.setRequestHeader("Content-Type", "application/json")
-                r.setRequestHeader("Authorization", "Bearer " + user)
-                r.send(null)
+                    r.open("GET", "http://localhost:5000/list-annotations", true)
+                    r.setRequestHeader("Content-Type", "application/json")
+                    r.setRequestHeader("Authorization", "Bearer " + user)
+                    r.send(null)
+                })
             }
-        })
     </script>
     <style>
         html {
