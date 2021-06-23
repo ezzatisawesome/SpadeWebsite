@@ -18,29 +18,55 @@
                     $(location).attr("href", "signup.html")
                 })
                 $("#submit").click(() => {
-                    let r = new XMLHttpRequest()
-                    r.onreadystatechange = (() => {
-                        if (r.readyState==4 && r.status==200) {
-                            if (r.responseText == "Failed") {
-                                $("#login-reponse").text("Invalid username or password")
-                            } else {
-                                $("#login-response").text("Success")
-                                localStorage.setItem("user", r.response)
-                                $(location).attr("href", "annotations.html")
+                    psw_check();
+                    if (usr_check() && psw_check()) {
+                        let r = new XMLHttpRequest()
+                        r.onreadystatechange = () => {
+                            if (r.readyState==4 && r.status==200) {
+                                console.log(r.responseText)
+                                if (r.responseText == "Failed") {
+                                    $("#login-msg").text("Invalid username or password")
+                                } else {
+                                    localStorage.setItem("user", r.response)
+                                    $(location).attr("href", "annotations.html")
+                                }
                             }
                         }
-                    })
+                        r.open("POST", "http://localhost:5000/auth/login", true)
+                        r.setRequestHeader("Content-Type", "application/json")
+                        r.send(JSON.stringify({
+                            "user": $("#login-field-usr").val(),
+                            "password": $("#login-field-psw").val()
+                        }))
+                    } else {
 
-                    r.open("POST", "http://localhost:5000/auth/login", true)
-                    r.setRequestHeader("Content-Type", "application/json")
-                    r.send(JSON.stringify({
-                        "user": $("#login-field-usr").val(),
-                        "password": $("#login-field-psw").val()
-                    }))
+                    }
                 })
             })
         } else {
             $(location).attr("href", "annotations.html")
+        }
+        function usr_check() {
+            if($("#login-field-usr").val() == "") {
+                $("#login-field-usr").addClass("bad-input-lab")
+                $("#login-label-usr").addClass("bad-input-let")
+                return false
+            } else {
+                $("#login-field-usr").removeClass("bad-input-lab")
+                $("#login-label-usr").removeClass("bad-input-let")
+                return true
+            }
+        }
+        function psw_check() {
+            if($("#login-field-psw").val() == "") {
+                $("#login-field-psw").addClass("bad-input-lab")
+                $("#login-label-psw").addClass("bad-input-let")
+                return false
+            } else {
+                $("#login-field-psw").removeClass("bad-input-lab")
+                $("#login-label-psw").removeClass("bad-input-let")
+                return true
+            }
         }
     </script>
     <style>
@@ -80,16 +106,17 @@
             font-size: 11.72px;
             text-decoration-line: underline;
             color: #2e2c2f;
+            padding: 0;
         }
         .login-cntr .user-cntr {
             width: 100%;
             position: relative;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             margin-bottom: 1em;
             padding-left: 30px;
             padding-right: 30px;
-
         }
         .login-cntr .user-cntr input {
             width: 100%;
@@ -107,7 +134,7 @@
         .login-cntr .user-cntr label {
             position: absolute;
             top: 4px;
-            left: 5px;
+            left: 10px;
             font-family: "Lato", sans-serif;
             font-size: 18.75px;
             color: rgba(46, 44, 47, 0.5);
@@ -132,7 +159,13 @@
             justify-content: center;
             padding-left: 30px;
             padding-right: 30px;
-        }        
+        }    
+        #btn-cntr h3 {
+            text-align: center;
+            font-family: "Roboto", sans-serif;
+            font-size: 11.72px;
+            color: #f9627d;
+        }    
         #btn-cntr button {
             border: none;
             background-color: transparent;
@@ -154,6 +187,12 @@
             color: #ffffff;
             margin-top: 15px;
         }
+        .bad-input-lab {
+            border: 1px solid #f9627d !important;
+        }
+        .bad-input-let {
+            color: #f9627d !important;
+        }
     </style>
 </head>
 <body>
@@ -164,14 +203,15 @@
                 <button>I don't have an account</button>
             </div>
             <div class="user-cntr">
-                <input type="text" required="" name="login-field-usr" id="login-field-usr">
-                <label>username</label>
+                <input type="text" required="" name="login-field-usr" id="login-field-usr" onkeyup="usr_check();">
+                <label id="login-label-usr">username</label>
             </div>
             <div class="user-cntr">
-                <input type="password" required="" name="login-field-psw" id="login-field-psw">
-                <label>password</label>
+                <input type="password" required="" name="login-field-psw" id="login-field-psw" onkeyup="psw_check();">
+                <label id="login-label-psw">password</label>
             </div>
             <div id="btn-cntr">
+                <h3 id="login-msg"></h3>
                 <button>I forgot my password</button>
                 <button id="submit">continue</button>
             </div>

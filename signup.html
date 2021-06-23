@@ -73,7 +73,6 @@
         function check_psw() {
                 psw = $("#login-field-psw").val()
                 var strength = 0
-                
                 // Checking password strength
                 if (psw.length > 7) {
                     strength += 1
@@ -110,7 +109,6 @@
                     $("#psw-msg").text("Your password is strong")
                     $("#login-field-psw").removeClass('bad-input')
                 }
-
                 // Check password length
                 if (psw.length < 6 && psw.length > 0) {
                     $("#psw-msg").text("Your password should be 8 characters or more")
@@ -165,6 +163,7 @@
             font-size: 11.72px;
             text-decoration-line: underline;
             color: #2e2c2f;
+            padding: 0;
         }
         .login-cntr .user-cntr {
             width: 100%;
