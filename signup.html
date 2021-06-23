@@ -16,30 +16,38 @@
                 $(location).attr("href", "signin.html")
             })
             $("#submit").click(() => {
-                console.log(check_email(), check_usr(), check_psw())
                 if(check_email() && check_usr() && check_psw()) {
                     let r = new XMLHttpRequest()
                     r.onreadystatechange = () => {
-                        if(check_email() && check_usr() && check_psw()) {
+                        if (r.readyState==4 && r.status==200) {
+                            if(check_email() && check_usr() && check_psw()) {
                             console.log(r.responseText)
                             if (r.responseText == "Email already used!") {
                                 $("#email-msg").text("There is already an email connected with this account")                
                                 $("#login-field-email").addClass("bad-input")
+                                console.log("helliii")
+
+                                localStorage.removeItem("user")
                             } else if (r.responseText == "User already exists!") {
-                                $("#usr-msg").text("There is already an user by this name")
+                                $("#usr-msg").text("There is already a user by this name")
+                                console.log("helliii")
+
+                                localStorage.removeItem("user")
                             } else {
+                                console.log("helloooooo")
                                 localStorage.setItem("user", r.response)
                             }
                         } else {
 
                         }
+                        }
                     }
                     r.open("POST", "http://localhost:5000/auth/createUser", true);
                     r.setRequestHeader('Content-Type', 'application/json');
                     r.send(JSON.stringify({
-                        "user": $("#login-field-email").val(),
-                        "password": $("#login-field-usr").val(),
-                        "email": $("#login-field-psw").val()
+                        "user": $("#login-field-usr").val(),
+                        "password": $("#login-field-psw").val(),
+                        "email": $("#login-field-email").val()
                     }));
                 }
             })   
@@ -71,60 +79,58 @@
             }
         }
         function check_psw() {
-                psw = $("#login-field-psw").val()
-                var strength = 0
-                // Checking password strength
-                if (psw.length > 7) {
-                    strength += 1
-                }
-                // If password contains both lower and uppercase characters, increase strength value.
-                if (psw.match(/([a-z].*[A-Z])|([A-Z].*[a-z])/)) {
-                    strength += 1
-                }
-                // If it has numbers and characters, increase strength value.
-                if (psw.match(/([a-zA-Z])/) && psw.match(/([0-9])/)) {
-                    strength += 1
-                }
-                // If it has one special character, increase strength value.
-                if (psw.match(/([!,%,&,@,#,$,^,*,?,_,~])/)) {
-                    strength += 1
-                }
-                // If it has two special characters, increase strength value.
-                if (psw.match(/(.*[!,%,&,@,#,$,^,*,?,_,~].*[!,%,&,@,#,$,^,*,?,_,~])/)) {
-                    strength += 1
-                }
-                // Calculated strength value, we can return messages
-                // If value is less than 2
+            let psw = $("#login-field-psw").val()
+            var strength = 0
+            var psw_ok = false
+            // Checking password strength
+            if (psw.length > 7) {
+                strength += 1
+            }
+            // If password contains both lower and uppercase characters, increase strength value.
+            if (psw.match(/([a-z].*[A-Z])|([A-Z].*[a-z])/)) {
+                strength += 1
+            }
+            // If it has numbers and characters, increase strength value.
+            if (psw.match(/([a-zA-Z])/) && psw.match(/([0-9])/)) {
+                strength += 1
+            }
+            // If it has one special character, increase strength value.
+            if (psw.match(/([!,%,&,@,#,$,^,*,?,_,~])/)) {
+                strength += 1
+            }
+            // If it has two special characters, increase strength value.
+            if (psw.match(/(.*[!,%,&,@,#,$,^,*,?,_,~].*[!,%,&,@,#,$,^,*,?,_,~])/)) {
+                strength += 1
+            }
+            
+            // Output Messages
+            if (psw.length == 0) {
+                $("#psw-msg").text("Required")
+                $("#psw-msg").removeClass("okay-psw good-psw").addClass("weak-psw")
+                $("#login-field-psw").addClass("bad-input")
+            } else if (psw.length > 0 && psw.length < 9) {
+                $("#psw-msg").text("Your password should be 8 characters or more")
+                $("#psw-msg").removeClass("okay-psw good-psw").addClass("weak-psw")
+                $("#login-field-psw").addClass("bad-input")
+            } else {
                 if (strength < 2) {
-                    $("#psw-msg").removeClass("strong-psw okay-psw").addClass("weak-psw")
                     $("#psw-msg").text("Your password is weak")
+                    $("#psw-msg").removeClass("strong-psw okay-psw").addClass("weak-psw")
                     $("#login-field-psw").addClass('bad-input')
-                    return false
                 } else if (strength == 2) {
                     $("#psw-msg").removeClass("strong-psw weak-psw bad-input").addClass("okay-psw")
                     $("#psw-msg").text("Your password strength is okay")
                     $("#login-field-psw").removeClass('bad-input')
+                    psw_ok = true
                 } else {
                     $("#psw-msg").removeClass("weak-psw okay-psw").addClass("strong-psw")
                     $("#psw-msg").text("Your password is strong")
                     $("#login-field-psw").removeClass('bad-input')
+                    psw_ok = true
                 }
-                // Check password length
-                if (psw.length < 6 && psw.length > 0) {
-                    $("#psw-msg").text("Your password should be 8 characters or more")
-                    $("#psw-msg").addClass("weak-psw")
-                    $("#login-field-psw").addClass("bad-input")
-                    return false
-                } else if (psw.length == 0) {
-                    $("#psw-msg").text("Required")
-                    $("#psw-msg").addClass("weak-psw")
-                    $("#login-field-psw").addClass("bad-input")
-                    return false
-                } else {
-                    $("#login-field-psw").removeClass("bad-input")
-                }
-                return true
             }
+            return psw_ok
+        }
     </script>
     <style>
         .container-fluid {
@@ -197,7 +203,7 @@
         .login-cntr .user-cntr label {
             position: absolute;
             top: 4px;
-            left: 5px;
+            left: 10px;
             font-family: "Lato", sans-serif;
             font-size: 18.75px;
             color: rgba(46, 44, 47, 0.5);
@@ -260,17 +266,17 @@
                 <button>I do have an account</button>
             </div>
             <div class="user-cntr">
-                <input type="text" required="" name="login-field-email" id="login-field-email" onKeyUp="check_email();">
+                <input type="text" required="" name="login-field-email" id="login-field-email" oninput="check_email();">
                 <label>email</label>
                 <h3 id="email-msg"></h3>
             </div>
             <div class="user-cntr">
-                <input type="text" required="" name="login-field-usr" id="login-field-usr" onKeyUp="check_usr();">
+                <input type="text" required="" name="login-field-usr" id="login-field-usr" oninput="check_usr();">
                 <label>username</label>
                 <h3 id="usr-msg"></h3>
             </div>
             <div class="user-cntr">
-                <input type="password" required="" name="login-field-psw" id="login-field-psw" onKeyUp="check_psw();">
+                <input type="password" required="" name="login-field-psw" id="login-field-psw" oninput="check_psw();">
                 <label>password</label>
                 <h3 id="psw-msg"></h3>
             </div>

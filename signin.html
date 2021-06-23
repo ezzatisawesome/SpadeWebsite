@@ -23,7 +23,6 @@
                         let r = new XMLHttpRequest()
                         r.onreadystatechange = () => {
                             if (r.readyState==4 && r.status==200) {
-                                console.log(r.responseText)
                                 if (r.responseText == "Failed") {
                                     $("#login-msg").text("Invalid username or password")
                                 } else {
@@ -39,7 +38,7 @@
                             "password": $("#login-field-psw").val()
                         }))
                     } else {
-
+                        //
                     }
                 })
             })
@@ -203,11 +202,11 @@
                 <button>I don't have an account</button>
             </div>
             <div class="user-cntr">
-                <input type="text" required="" name="login-field-usr" id="login-field-usr" onkeyup="usr_check();">
+                <input type="text" required="" name="login-field-usr" id="login-field-usr" oninput="usr_check();">
                 <label id="login-label-usr">username</label>
             </div>
             <div class="user-cntr">
-                <input type="password" required="" name="login-field-psw" id="login-field-psw" onkeyup="psw_check();">
+                <input type="password" required="" name="login-field-psw" id="login-field-psw" oninput="psw_check();">
                 <label id="login-label-psw">password</label>
             </div>
             <div id="btn-cntr">
