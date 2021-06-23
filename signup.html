@@ -25,17 +25,15 @@
                             if (r.responseText == "Email already used!") {
                                 $("#email-msg").text("There is already an email connected with this account")                
                                 $("#login-field-email").addClass("bad-input")
-                                console.log("helliii")
 
                                 localStorage.removeItem("user")
                             } else if (r.responseText == "User already exists!") {
                                 $("#usr-msg").text("There is already a user by this name")
-                                console.log("helliii")
 
                                 localStorage.removeItem("user")
                             } else {
-                                console.log("helloooooo")
                                 localStorage.setItem("user", r.response)
+                                $(location).attr("href", "annotations.html")
                             }
                         } else {
 
@@ -106,25 +104,25 @@
             // Output Messages
             if (psw.length == 0) {
                 $("#psw-msg").text("Required")
-                $("#psw-msg").removeClass("okay-psw good-psw").addClass("weak-psw")
+                $("#psw-msg").removeClass("strong-psw okay-psw").addClass("weak-psw")
                 $("#login-field-psw").addClass("bad-input")
             } else if (psw.length > 0 && psw.length < 9) {
-                $("#psw-msg").text("Your password should be 8 characters or more")
-                $("#psw-msg").removeClass("okay-psw good-psw").addClass("weak-psw")
+                $("#psw-msg").text("Your password should be 8 characters or more.")
+                $("#psw-msg").removeClass("strong-psw okay-psw").addClass("weak-psw")
                 $("#login-field-psw").addClass("bad-input")
             } else {
                 if (strength < 2) {
-                    $("#psw-msg").text("Your password is weak")
+                    $("#psw-msg").text("Your password is weak. Try adding numbers or special characters.")
                     $("#psw-msg").removeClass("strong-psw okay-psw").addClass("weak-psw")
                     $("#login-field-psw").addClass('bad-input')
                 } else if (strength == 2) {
                     $("#psw-msg").removeClass("strong-psw weak-psw bad-input").addClass("okay-psw")
-                    $("#psw-msg").text("Your password strength is okay")
+                    $("#psw-msg").text("Your password strength is okay. Try adding special characters.")
                     $("#login-field-psw").removeClass('bad-input')
                     psw_ok = true
                 } else {
-                    $("#psw-msg").removeClass("weak-psw okay-psw").addClass("strong-psw")
-                    $("#psw-msg").text("Your password is strong")
+                    $("#psw-msg").removeClass("okay-psw weak-psw").addClass("strong-psw")
+                    $("#psw-msg").text("Your password is strong.")
                     $("#login-field-psw").removeClass('bad-input')
                     psw_ok = true
                 }
