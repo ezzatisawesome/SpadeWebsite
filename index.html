@@ -1,340 +1,590 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spade</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Lato:wght@400;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <script src="js/jquery.js"></script>
-    <script>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spade</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Lato:wght@400;700&family=Roboto:wght@300&display=swap"
+    rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+<script src="js/jquery.js"></script>
+<script>
+    $(document).ready(() => {
         $("#footer").load("common/footer.html")
-        $(document).ready(() => {
-            $("#login-cntr").click(() => {
-                $(location).attr("href", "signin.html")
-            })
+        $("#login-cntr").click(() => {
+            $(location).attr("href", "signin.html")
         })
-    </script>
-    <style>
-        /* Fonts */
-        .lato-18 {
-            font-family: "Lato", sans-serif;
-            font-size: 18.75px;
-            letter-spacing: 0.03em;
-            font-weight: 700;
+    })
+</script>
+<style>
+    /* Fonts */
+    .lato-18 {
+        font-family: "Lato", sans-serif;
+        font-size: 18.75px;
+        letter-spacing: 0.03em;
+        font-weight: 700;
+    }
+
+    .lato-30 {
+        font-family: "Lato", sans-serif;
+        font-size: 30px;
+        letter-spacing: 0.06em;
+        font-weight: 400;
+    }
+
+    .lato-48 {
+        font-family: "Lato", sans-serif;
+        font-size: 48px;
+        letter-spacing: 0.03em;
+        font-weight: 700;
+    }
+
+    .lato-76 {
+        font-family: "Lato", sans-serif;
+        font-size: 76.8px;
+        letter-spacing: 0.03em;
+        font-weight: 700;
+    }
+
+    .roboto-18 {
+        font-family: "Roboto", sans-serif;
+        font-size: 18.75px;
+        letter-spacing: 0.03em;
+    }
+
+    .roboto-30 {
+        font-family: "Roboto", sans-serif;
+        font-size: 30px;
+        letter-spacing: 0.03em;
+    }
+
+    .roboto-48 {
+        font-family: "Roboto", sans-serif;
+        font-size: 48px;
+        letter-spacing: 0.03em;
+    }
+
+    html {
+        font-size: 30px;
+    }
+    .container-fluid {
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Header */
+    #header {
+        justify-content: space-between;
+        padding-left: 90px;
+        padding-right: 90px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    #logo-cntr {
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #logo-cntr img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #logo-cntr h3 {
+        font-family: "Comfortaa", cursive;
+        font-size: 30px;
+    }
+
+    #login-cntr {
+        width: auto;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #login-cntr button {
+        width: 133px;
+        height: 36px;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        background-color: #0f4fe6;
+    }
+
+    /* Headline */
+    #headline {
+        margin-bottom: 8rem;
+    }
+
+    #headline .col-8 {
+        padding: 0;
+    }
+
+    #headline .col-8 h1 {
+        width: auto;
+        text-align: center;
+        margin-bottom: 0.5em;
+    }
+
+    #headline .col-8 p {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2em;
+    }
+
+    #headline .col-8 img {
+        width: 100%;
+    }
+
+    /* Annotations */
+    #annotations {
+        margin-bottom: 6rem;
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+
+    #annotations h3 {
+        margin-bottom: 0.625rem;
+        padding: 0;
+    }
+
+    #annotations .col-4 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #annotations .intro {
+        padding: 0;
+        margin: 0;
+    }
+
+    #annotations .intro p {
+        margin-bottom: 1.6rem;
+    }
+
+    #annotations .feature {
+        align-items: center;
+        margin-right: auto;
+        margin-bottom: 1rem;
+    }
+
+    #annotations .feature h3 {
+        font-family: "Lato", sans-serif;
+        font-size: 30px;
+        font-weight: 400;
+        letter-spacing: 0.03em;
+        text-align: left;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    #annotations .feature p {
+        font-family: "Roboto", sans-serif;
+        font-size: 18.75px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    #annotations img {
+        position: relative;
+    }
+
+    /* Citations */
+    #citations {
+        margin-bottom: 8rem;
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+
+    #citations .img-cntr {
+        padding: 0;
+    }
+
+    #citations .info-cntr {
+        padding-left: 2rem;
+    }
+
+    #citations .info-cntr h3 {
+        margin-bottom: 0.625rem;
+    }
+
+    #citations .info-cntr p {
+        margin: 0;
+    }
+
+    /* Ratings*/
+    #ratings {
+        margin-bottom: 6rem;
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+
+    /* Answers*/
+    #answers {
+        margin-bottom: 0;
+        padding-left: 180px;
+    }
+    #answers h3 {
+        margin-bottom: 1rem;
+        padding-left: 20px;
+    }
+    #answers p {
+        margin-bottom: 1em;
+        padding-left: 20px;
+    }
+    #answers img {
+        padding: 0;
+    }
+
+    /* Final Download Link */
+    #remarks {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #remarks h2 {
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #remarks h3 {
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #remarks button {
+        width: 300px;
+        height: 60px;
+        color: white;
+        border: none;
+        background-color: #0f4fe6;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Site Footer */
+    .site-footer {
+        background-color: #2e2c2f;
+        padding: 45px 0 20px;
+        font-size: 15px;
+        line-height: 24px;
+        color: #737373;
+    }
+    .site-footer hr {
+        border-top-color: #bbb;
+        opacity: 0.5
+    }
+    .site-footer hr.small {
+        margin: 20px 0
+    }
+    .site-footer h6 {
+        color: #fff;
+        font-size: 16px;
+        text-transform: uppercase;
+        margin-top: 5px;
+        letter-spacing: 2px
+    }
+    .site-footer a {
+        color: #737373;
+    }
+    .site-footer a:hover {
+        color: #3366cc;
+        text-decoration: none;
+    }
+    .footer-links {
+        padding-left: 0;
+        list-style: none
+    }
+    .footer-links li {
+        display: block
+    }
+    .footer-links a {
+        color: #737373
+    }
+    .footer-links a:active,
+    .footer-links a:focus,
+    .footer-links a:hover {
+        color: #3366cc;
+        text-decoration: none;
+    }
+    .footer-links.inline li {
+        display: inline-block
+    }
+    .site-footer .social-icons {
+        text-align: right
+    }
+    .site-footer .social-icons a {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        margin-left: 6px;
+        margin-right: 0;
+        border-radius: 100%;
+        background-color: #33353d
+    }
+    .copyright-text {
+        margin: 0
+    }
+    @media (max-width:991px) {
+        .site-footer [class^=col-] {
+            margin-bottom: 30px
         }
-        .lato-30 {
-            font-family: "Lato", sans-serif;
-            font-size: 30px;
-            letter-spacing: 0.06em;
-            font-weight: 400;
-        }
-        .lato-48 {
-            font-family: "Lato", sans-serif;
-            font-size: 48px;
-            letter-spacing: 0.03em;
-            font-weight: 700;
-        }
-        .lato-76 {
-            font-family: "Lato", sans-serif;
-            font-size: 76.8px;
-            letter-spacing: 0.03em;
-            font-weight: 700;
-        }
-        .roboto-18 {
-            font-family: "Roboto", sans-serif;
-            font-size: 18.75px;
-            letter-spacing: 0.03em;
-        }
-        .roboto-30 {
-            font-family: "Roboto", sans-serif;
-            font-size: 30px;
-            letter-spacing: 0.03em;
-        }
-        .roboto-48 {
-            font-family: "Roboto", sans-serif;
-            font-size: 48px;
-            letter-spacing: 0.03em;
-        }
-        
-        html {
-            font-size: 30px;
+    }
+    @media (max-width:767px) {
+        .site-footer {
+            padding-bottom: 0
         }
 
-        /* Header */
-        #header {
-            justify-content: space-between;
-            padding-left: 90px;
-            padding-right: 90px;
-            padding-top: 30px;
-            padding-bottom: 30px;
+        .site-footer .copyright-text,
+        .site-footer .social-icons {
+            text-align: center
         }
-        #logo-cntr {
-            width: auto;
-            display: flex;
-            flex-direction: row;
-            margin: 0px;
-            padding: 0px;
+    }
+    .social-icons {
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none
+    }
+    .social-icons li {
+        display: inline-block;
+        margin-bottom: 4px
+    }
+    .social-icons li.title {
+        margin-right: 15px;
+        text-transform: uppercase;
+        color: #96a2b2;
+        font-weight: 700;
+        font-size: 13px
+    }
+    .social-icons a {
+        background-color: #eceeef;
+        color: #818a91;
+        font-size: 16px;
+        display: inline-block;
+        line-height: 44px;
+        width: 44px;
+        height: 44px;
+        text-align: center;
+        margin-right: 8px;
+        border-radius: 100%;
+        -webkit-transition: all .2s linear;
+        -o-transition: all .2s linear;
+        transition: all .2s linear
+    }
+    .social-icons a:active,
+    .social-icons a:focus,
+    .social-icons a:hover {
+        color: #fff;
+        background-color: #29aafe
+    }
+    .social-icons.size-sm a {
+        line-height: 34px;
+        height: 34px;
+        width: 34px;
+        font-size: 14px
+    }
+    .social-icons a.facebook:hover {
+        background-color: #3b5998
+    }
+    .social-icons a.twitter:hover {
+        background-color: #00aced
+    }
+    .social-icons a.linkedin:hover {
+        background-color: #007bb6
+    }
+    .social-icons a.dribbble:hover {
+        background-color: #ea4c89
+    }
+    @media (max-width:767px) {
+        .social-icons li.title {
+            display: block;
+            margin-right: 0;
+            font-weight: 600
         }
-        #logo-cntr img {
-            width: 50px;
-            height: 50px;
-        }
-        #logo-cntr h3 {
-            font-family: "Comfortaa", cursive;
-            font-size: 30px;
-        }
-        #login-cntr {
-            width: auto;
-            margin: 0px;
-            padding: 0px;
-        }
-        #login-cntr button {
-            width: 133px;
-            height: 36px;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            background-color: #0f4fe6;
-        }
+    }
+    .footer-links a {
+        text-decoration: none;
+    }
+    .footer-links a:hover {
+        color: white;
+    }
 
-        /* Headline */
-        #headline {
-            margin-bottom: 8rem;
-        }
-        #headline .col-8 {
-            padding: 0;
-        }
-        #headline .col-8 h1 {
-            width: auto;
-            text-align: center;
-            margin-bottom: 0.5em;
-        }
-        #headline .col-8 p {
-            text-align: center;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 2em;
-        }
-        #headline .col-8 img {
-            width: 100%;
-        }
-        
-        /* Annotations */
-        #annotations {
-            margin-bottom: 2rem;
-            padding-left: 90px;
-            padding-right: 90px;
-        }
-        #annotations h3 {
-            margin-bottom: 0.625rem;
-            padding: 0;
-        }
-        #annotations .col-4 {
-            padding-left: 0;
-            padding-right: 0;
-        }
-        #annotations .intro {
-            padding: 0;
-            margin: 0;
-        }
-        #annotations .intro p {
-            margin-bottom: 1.6rem;
-        }
-        #annotations .feature {
-            align-items: center;
-            margin-right: auto;
-            margin-bottom: 1rem;
-        }
-        #annotations .feature h3 {
-            font-family: "Lato", sans-serif;
-            font-size: 30px;
-            font-weight: 400;
-            letter-spacing: 0.03em;
-            text-align: left;
-            margin-top: 0;
-            margin-bottom: 0;
-        }
-        #annotations .feature p {
-            font-family: "Roboto", sans-serif;
-            font-size: 18.75px;
-            margin-top: 0;
-            margin-bottom: 0;
-        }
-        #annotations img {
-            position: relative;
-        }
-
-        /* Citations */
-        #citations {
-            margin-bottom: 8rem;
-            padding-left: 90px;
-            padding-right: 90px;
-        }
-        #citations .img-cntr {
-            padding: 0;
-        }
-        #citations .info-cntr {
-            padding-left: 2rem;
-        }
-        #citations .info-cntr h3 {
-            margin-bottom: 0.625rem;
-        }
-        #citations .info-cntr p {
-            margin: 0;
-        }
-
-        /* Ratings*/
-        #ratings {
-            margin-bottom: 8rem;
-            padding-left: 90px;
-            padding-right: 90px;
-        }
-        #ratings h3 {
-
-        }
-
-        /* Answers*/
-        #answers {
-            margin-bottom: 0;
-            padding-left: 90px;
-            padding-right: 90px;
-        }
-
-        /* Final Download Link */
-        #remarks {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-        }
-        #remarks h2 {
-            width: auto;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        #remarks h3 {
-            width: auto;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        #remarks button {
-            width: 300px;
-            height: 60px;
-            color: white;
-            border: none;
-            background-color: #0f4fe6;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Border */
-        .border {
-            border: 1px solid black;
-        }
-        .border1{
-            border: 1px solid blue;
-        }
-    </style>
+    /* Border */
+    .border {
+    border: 1px solid black;
+    }
+    .border1{
+    border: 1px solid blue;
+    }
+</style>
 </head>
+
 <body>
-    <div class="container-fluid">
-        <div class="row" id="header">
-            <div class="col-2" id="logo-cntr">
-                <img src="img/spade_handle_transparent.png" alt="">
-                <h3>spade</h3>
-            </div>
-            <div class="col-2" id="login-cntr">
-                <button class="lato-18">Log In</button>
-            </div>
+<div class="container-fluid">
+    <div class="row" id="header">
+        <div class="col-2" id="logo-cntr">
+            <img src="img/spade_handle_transparent.png" alt="">
+            <h3>spade</h3>
         </div>
-        <div class="row border" id="headline">
-            <div class="col-2">
+        <div class="col-2" id="login-cntr">
+            <button class="lato-18">Log In</button>
+        </div>
+    </div>
+    <div class="row border" id="headline">
+        <div class="col-2">
 
-            </div>
-            <div class="col-8">
-                <h1 class="lato-76">Research Simplified</h1>
-                <p class="roboto-30">
-                    Spade allows you to directly annotate on, automatically cite, assess credibility, and webscrape webpages.
-                </p>
-                <img src="img/macbook.svg" alt="">
-            </div>
-            <div class="col-2">
-
-            </div>
         </div>
-        <div class="row border" id="annotations">
-            <h3 class="lato-48">awesome annotations</h3>
-            <div class="col-4">
-                <div class="intro">
-                    <p class="roboto-18">
-                        With Spade, you can mark up a page as if it were on paper.
-                    </p>
-                </div>
-                <div class="feature">
-                    <h3>Annotate Directly</h3>
-                    <p>on a webpage using a pen, highlighter, and textboxes.</p>
-                </div>
-                <div class="feature">
-                    <h3>Notes are Saved</h3>
-                    <p>to the cloud so they appear even after you exit a page.</p>
-                </div>
-                <div class="feature">
-                    <h3>Share Annotations</h3>
-                    <p>with colleagues, peers, and friends for reference.</p>
-                </div>
-            </div>
-            <div class="col-8">
-                <img src="img/annotations.svg" alt="">
-            </div>
+        <div class="col-8">
+            <h1 class="lato-76">Research Simplified</h1>
+            <p class="roboto-30">
+                Spade allows you to directly annotate on, automatically cite, assess credibility, and webscrape
+                webpages.
+            </p>
+            <img src="img/macbook.svg" alt="">
         </div>
-        <div class="row border" id="citations">
-            <div class="col-6 img-cntr">
-                <img class="" src="img/citations.svg" alt="">
-            </div>
-            <div class="col-6 info-cntr">
-                <div class="intro">
-                    <h3 class="lato-30">Cool Citations</h3>
-                    <p class="roboto-18">
-                        Spade automatically cites webpages in MLA, Chicago, APA and compiles citations into a list for you.
-                    </p>
-                </div>
-                <div>
-
-                </div>
-            </div>
-        </div>
-        <div class="row border" id="ratings">
-            <div class="col-4">
-                <h3 class="lato-30">Ready Ratings</h3>
-                <p class="roboto-18">Using artifical intelligiance and web scraping, Spade reviews the credibility of the webpage for you. Relavance, author, grammar scores and more are calculated into a final rating.</p>
-            </div>
-            <div class="col-8">
-
-            </div>
-        </div>
-        <div class="row" id="answers">
-            <div>
-                <h3>Get Answers Fast</h3>
-                <p>Tired of reading large chunks of text?</p>
-                <p>Spade finds the answers to your questions directly from the webpage using artifical intelligiance.</p>
-            </div>
-            <div>
-                <img src="img/macbook2.svg" alt="">
-            </div>
-        </div>
-        <div class="border1" id="remarks">
-            <h2 class="lato-48 border1">Understand your research</h2>
-            <h3 class="roboto-18 border">Let Spade work for you</h3>
-            <button class="roboto-18 border">Get started for free</button>
-        </div>
-        <div id="footer">
+        <div class="col-2">
 
         </div>
     </div>
+    <div class="row border" id="annotations">
+        <h3 class="lato-48">awesome annotations</h3>
+        <div class="col-4">
+            <div class="intro">
+                <p class="roboto-18">
+                    With Spade, you can mark up a page as if it were on paper.
+                </p>
+            </div>
+            <div class="feature">
+                <h3>Annotate Directly</h3>
+                <p>on a webpage using a pen, highlighter, and textboxes.</p>
+            </div>
+            <div class="feature">
+                <h3>Notes are Saved</h3>
+                <p>to the cloud so they appear even after you exit a page.</p>
+            </div>
+            <div class="feature">
+                <h3>Share Annotations</h3>
+                <p>with colleagues, peers, and friends for reference.</p>
+            </div>
+        </div>
+        <div class="col-8">
+            <img src="img/annotations.svg" alt="">
+        </div>
+    </div>
+    <div class="row border" id="citations">
+        <div class="col-6 img-cntr">
+            <img class="" src="img/citations.svg" alt="">
+        </div>
+        <div class="col-6 info-cntr">
+            <div class="intro">
+                <h3 class="lato-30">cool citations</h3>
+                <p class="roboto-18">
+                    Spade automatically cites webpages in MLA, Chicago, APA and compiles citations into a list for
+                    you.
+                </p>
+            </div>
+            <div>
+
+            </div>
+        </div>
+    </div>
+    <div class="row border" id="ratings">
+        <div class="col-4">
+            <h3 class="lato-30">ready ratings</h3>
+            <p class="roboto-18">Using artifical intelligiance and web scraping, Spade reviews the credibility of
+                the webpage for you. Relavance, author, grammar scores and more are calculated into a final rating.
+            </p>
+        </div>
+        <div class="col-8">
+
+        </div>
+    </div>
+    <div class="row border" id="answers">
+        <h3 class="lato-30">get answers fast</h3>
+        <p class="roboto-18">
+            Tired of reading large chunks of text?
+        </p>
+        <p class="roboto-18">
+            Spade finds the answers to your questions directly from the webpage using artifical intelligiance.
+        </p>
+        <img src="img/macbook2.svg" alt="">
+    </div>
+
+
+    <div class="border"id="remarks">
+        <h2 class="lato-48">Understand your research</h2>
+        <h3 class="roboto-18">Let Spade work for you</h3>
+        <button class="roboto-18">Get started for free</button>
+    </div>
+
+
+
+    <footer class="row site-footer border">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <!-- <h6>About</h6> -->
+                    <h2 style="color:white;font-size:50px">
+                        <span><img src="img/spade_handle_transparent.png" alt="" style="height: 100px;"></span>
+                        Spade
+                    </h2>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <h6>Product</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Spade Premium</a></li>
+                        <li><a href="#">Spade Basic</a></li>
+                        <li><a href="#">Spade Research</a></li>
+                        <li><a href="#">Spade Safari</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <h6>Company</h6>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by
+                        SPADE.
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons">
+                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                        <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
 </body>
 </html>
