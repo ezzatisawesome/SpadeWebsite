@@ -19,6 +19,29 @@
         $("#login-cntr").click(() => {
             $(location).attr("href", "signin.html")
         })
+
+
+
+
+
+
+
+
+        // Get the id of the <path> element and the length of <path>
+        var triangle = document.getElementById("drawing");
+        var length = triangle.getTotalLength();
+        // The start position of the drawing
+        triangle.style.strokeDasharray = length;
+        // Find scroll percentage on scroll (using cross-browser properties), and offset dash same amount as percentage scrolled
+        window.addEventListener("scroll", myFunction);
+        function myFunction() {
+            var scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 5;
+
+            var draw = length * scrollpercent;
+
+            // Reverse the drawing (when scrolling upwards)
+            triangle.style.strokeDashoffset = length - draw;
+        }
     })
 </script>
 <style>
@@ -113,6 +136,9 @@
     #login-cntr button {
         width: 133px;
         height: 36px;
+        font-family: "Lato", cursive;
+        font-size: 18.75px;
+        font-weight: 400;
         color: #ffffff;
         border: none;
         border-radius: 5px;
@@ -121,28 +147,32 @@
 
     /* Headline */
     #headline {
+        justify-content: center;
         margin-bottom: 8rem;
-    }
-
-    #headline .col-8 {
         padding: 0;
     }
-
-    #headline .col-8 h1 {
+    #headline h1 {
         width: auto;
         text-align: center;
         margin-bottom: 0.5em;
     }
-
-    #headline .col-8 p {
+    #headline p {
+        width: 60%;
         text-align: center;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 2em;
     }
-
-    #headline .col-8 img {
+    #headline .img-cntr {
+        position: relative;
+    }
+    #headline .img-cntr img {
         width: 100%;
+    }
+    #headline .img-cntr svg {
+        position: absolute;
+        top: 0px;
+        left: 0px;
     }
 
     /* Annotations */
@@ -443,26 +473,22 @@
             <h3>spade</h3>
         </div>
         <div class="col-2" id="login-cntr">
-            <button class="lato-18">Log In</button>
+            <button>Log In</button>
         </div>
     </div>
-    <div class="row border" id="headline">
-        <div class="col-2">
-
-        </div>
-        <div class="col-8">
-            <h1 class="lato-76">Research Simplified</h1>
-            <p class="roboto-30">
-                Spade allows you to directly annotate on, automatically cite, assess credibility, and webscrape
-                webpages.
-            </p>
-            <img src="img/macbook.svg" alt="">
-        </div>
-        <div class="col-2">
-
+    <div class="row" id="headline">
+        <h1 class="lato-76">Research Simplified</h1>
+        <p class="roboto-30">
+            Spade allows you to directly annotate on, automatically cite, assess credibility, and webscrape
+            webpages.
+        </p>
+        <div class="img-cntr">
+            <img src="img/headline.svg" alt="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1216.41" height="500.87" viewBox="0 0 1216.41 500.87">
+            </svg>
         </div>
     </div>
-    <div class="row border" id="annotations">
+    <div class="row" id="annotations">
         <h3 class="lato-48">awesome annotations</h3>
         <div class="col-4">
             <div class="intro">
@@ -487,7 +513,7 @@
             <img src="img/annotations.svg" alt="">
         </div>
     </div>
-    <div class="row border" id="citations">
+    <div class="row" id="citations">
         <div class="col-6 img-cntr">
             <img class="" src="img/citations.svg" alt="">
         </div>
@@ -504,7 +530,7 @@
             </div>
         </div>
     </div>
-    <div class="row border" id="ratings">
+    <div class="row" id="ratings">
         <div class="col-4">
             <h3 class="lato-30">ready ratings</h3>
             <p class="roboto-18">Using artifical intelligiance and web scraping, Spade reviews the credibility of
@@ -515,7 +541,7 @@
 
         </div>
     </div>
-    <div class="row border" id="answers">
+    <div class="row" id="answers">
         <h3 class="lato-30">get answers fast</h3>
         <p class="roboto-18">
             Tired of reading large chunks of text?
@@ -523,11 +549,11 @@
         <p class="roboto-18">
             Spade finds the answers to your questions directly from the webpage using artifical intelligiance.
         </p>
-        <img src="img/macbook2.svg" alt="">
+        <img src="img/computers.png" alt="">
     </div>
 
 
-    <div class="border"id="remarks">
+    <div class="" id="remarks">
         <h2 class="lato-48">Understand your research</h2>
         <h3 class="roboto-18">Let Spade work for you</h3>
         <button class="roboto-18">Get started for free</button>
@@ -535,7 +561,7 @@
 
 
 
-    <footer class="row site-footer border">
+    <footer class="row site-footer">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-6">
