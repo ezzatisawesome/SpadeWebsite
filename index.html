@@ -29,8 +29,8 @@
         .lato-30 {
             font-family: "Lato", sans-serif;
             font-size: 30px;
-            letter-spacing: 0.03em;
-            font-weight: 700;
+            letter-spacing: 0.06em;
+            font-weight: 400;
         }
         .lato-48 {
             font-family: "Lato", sans-serif;
@@ -103,7 +103,7 @@
 
         /* Headline */
         #headline {
-            margin-bottom: 250px;
+            margin-bottom: 8rem;
         }
         #headline .col-8 {
             padding: 0;
@@ -125,11 +125,12 @@
         
         /* Annotations */
         #annotations {
+            margin-bottom: 2rem;
             padding-left: 90px;
             padding-right: 90px;
         }
         #annotations h3 {
-            margin-bottom: 0.5em;
+            margin-bottom: 0.625rem;
             padding: 0;
         }
         #annotations .col-4 {
@@ -141,9 +142,10 @@
             margin: 0;
         }
         #annotations .intro p {
-            margin-bottom: 3rem;
+            margin-bottom: 1.6rem;
         }
         #annotations .feature {
+            align-items: center;
             margin-right: auto;
             margin-bottom: 1rem;
         }
@@ -166,6 +168,70 @@
             position: relative;
         }
 
+        /* Citations */
+        #citations {
+            margin-bottom: 8rem;
+            padding-left: 90px;
+            padding-right: 90px;
+        }
+        #citations .img-cntr {
+            padding: 0;
+        }
+        #citations .info-cntr {
+            padding-left: 2rem;
+        }
+        #citations .info-cntr h3 {
+            margin-bottom: 0.625rem;
+        }
+        #citations .info-cntr p {
+            margin: 0;
+        }
+
+        /* Ratings*/
+        #ratings {
+            margin-bottom: 8rem;
+            padding-left: 90px;
+            padding-right: 90px;
+        }
+        #ratings h3 {
+
+        }
+
+        /* Answers*/
+        #answers {
+            margin-bottom: 0;
+            padding-left: 90px;
+            padding-right: 90px;
+        }
+
+        /* Final Download Link */
+        #remarks {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        #remarks h2 {
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #remarks h3 {
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #remarks button {
+            width: 300px;
+            height: 60px;
+            color: white;
+            border: none;
+            background-color: #0f4fe6;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         /* Border */
         .border {
             border: 1px solid black;
@@ -186,7 +252,7 @@
                 <button class="lato-18">Log In</button>
             </div>
         </div>
-        <div class="row" id="headline">
+        <div class="row border" id="headline">
             <div class="col-2">
 
             </div>
@@ -201,8 +267,8 @@
 
             </div>
         </div>
-        <div class="row" id="annotations">
-            <h3 class="lato-48">Awesome Annotation</h3>
+        <div class="row border" id="annotations">
+            <h3 class="lato-48">awesome annotations</h3>
             <div class="col-4">
                 <div class="intro">
                     <p class="roboto-18">
@@ -226,25 +292,32 @@
                 <img src="img/annotations.svg" alt="">
             </div>
         </div>
-        <div>
-            <div>
-                <img src="img/citations.svg" alt="">
+        <div class="row border" id="citations">
+            <div class="col-6 img-cntr">
+                <img class="" src="img/citations.svg" alt="">
             </div>
-            <div>
-                <h3>Cool Citations</h3>
-                <p>Spade automatically cites webpages in MLA, Chicago, APA and compiles citations into a list for you.</p>
+            <div class="col-6 info-cntr">
+                <div class="intro">
+                    <h3 class="lato-30">Cool Citations</h3>
+                    <p class="roboto-18">
+                        Spade automatically cites webpages in MLA, Chicago, APA and compiles citations into a list for you.
+                    </p>
+                </div>
+                <div>
+
+                </div>
             </div>
         </div>
-        <div>
-            <div>
-                <h3>Ready Ratings</h3>
-                <p>Using artifical intelligiance and web scraping, Spade reviews the credibility of the webpage for you. Relavance, author, grammar scores and more are calculated into a final rating.</p>
+        <div class="row border" id="ratings">
+            <div class="col-4">
+                <h3 class="lato-30">Ready Ratings</h3>
+                <p class="roboto-18">Using artifical intelligiance and web scraping, Spade reviews the credibility of the webpage for you. Relavance, author, grammar scores and more are calculated into a final rating.</p>
             </div>
-            <div>
+            <div class="col-8">
 
             </div>
         </div>
-        <div class="row">
+        <div class="row" id="answers">
             <div>
                 <h3>Get Answers Fast</h3>
                 <p>Tired of reading large chunks of text?</p>
@@ -253,15 +326,13 @@
             <div>
                 <img src="img/macbook2.svg" alt="">
             </div>
-            <div>
-                <div>
-                    <h2>Understand your research</h2>
-                    <h3>Let Spade work for you</h3>
-                    <button>Get started for free</button>
-                </div>
-            </div>
         </div>
-        <div class="row" id="footer">
+        <div class="border1" id="remarks">
+            <h2 class="lato-48 border1">Understand your research</h2>
+            <h3 class="roboto-18 border">Let Spade work for you</h3>
+            <button class="roboto-18 border">Get started for free</button>
+        </div>
+        <div id="footer">
 
         </div>
     </div>
