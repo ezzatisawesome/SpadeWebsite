@@ -264,9 +264,13 @@
     @media only screen and (max-width: 768px) {
         #citations {
             text-align: center;
+            margin-bottom: 3rem;
         }
         #citations .img-cntr {
-            padding-right: 0;
+            display: none;
+        }
+        #citations .img-cntr-2 {
+            display: block;
         }
         #citations .description-cntr {
             padding-left: 0;
@@ -278,13 +282,17 @@
     @media only screen and (min-width: 768px) {
         #citations {
             text-align: center;
+            margin-bottom: 3rem;
         }
         #citations p, h3 {
             margin-left: auto;
             margin-right: auto;
         }
         #citations .img-cntr {
-            padding-right: 0;
+            display: none;
+        }
+        #citations .img-cntr-2 {
+            display: block;
         }
         #citations .description-cntr {
             padding-left: 0;
@@ -298,6 +306,13 @@
             text-align: left;
             padding-left: 150px;
             padding-right: 150px;
+            margin-bottom: 6rem;
+        }
+        #citations .img-cntr {
+            display: block;
+        }
+        #citations .img-cntr-2 {
+            display: none;
         }
         #citations .description-cntr {
             padding-left: 110px;
@@ -313,17 +328,18 @@
         #citations {
             padding-left: 300px;
             padding-right: 300px;
+            margin-bottom: 6rem;
         }
         #citations .img-cntr {
             width: 50%;
+        }
+        #citations .img-cntr-2 {
+            display: none;
         }
         #citations .description-cntr {
             width: 50%;
             padding-left: 110px;
         }
-    }
-    #citations {
-        margin-bottom: 6rem;
     }
     #citations .img-cntr {
         padding-left: 0;
@@ -689,6 +705,9 @@
         <div class="col-md-12 col-lg-6 description-cntr">
             <h3 class="lato-48">cool citations</h3>
             <p class="roboto-18">Spade automatically cites webpages in MLA, Chicago, APA and compiles citations into a list for you.</p>
+        </div>
+        <div class="col-12 img-cntr-2">
+            <img src="img/citations.svg" alt="">
         </div>
     </div>
     <div class="row" id="ratings">
