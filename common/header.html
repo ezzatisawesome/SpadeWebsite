@@ -1,21 +1,81 @@
 <style>
+
+
+/* Header */
+@media only screen and (max-width: 568px) {
     #header {
-        height: 50px;
-        width: auto;
-        display: flex;
-        flex-direction: row;
-        margin-left: 10px;
+        padding-left: 25px;
+        margin-top: 0rem;
     }
-    #header img {
-        height: 50px;
+    #header #btn-cntr {
+        display: none;
     }
-    #header h3 {
-        font-family: "Comfortaa", cursive;
-        font-size: 30px;
-        margin-top: 6px;
+}
+@media only screen and (min-width: 568px) {
+    #header {
+        padding-left: 50px;
+        padding-right: 50px;
     }
+}
+@media only screen and (min-width: 768px) {
+    #header {
+        margin-top: 1rem;
+    }
+}
+@media only screen and (min-width: 992px) {
+    #header {
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+}
+@media only screen and (min-width: 1500px) {
+    #header {
+        padding-left: 300px;
+        padding-right: 300px;
+    }
+}
+#header {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom:15px
+}
+#header img {
+    height: 50px;
+}
+#header .logo-cntr {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    padding: 0;
+}
+#header .logo-cntr h3 {
+    position: relative;
+    top: 6px;
+    left: 3px;
+    font-family: "superscratchy";
+    font-size: 30px;
+}
+#header .btn-cntr {
+    width: auto;
+    padding: 0;
+}
+#header .btn-cntr button {
+    width: 133px;
+    height: 36px;
+    font-family: "Lato", cursive;
+    font-size: 18.75px;
+    font-weight: 400;
+    color: #ffffff;
+    border: none;
+    border-radius: 1rem;
+    background-color: #0f4fe6;
+}
+
 </style>
-<div id="header">
+<div class="col-2 logo-cntr" id="logo-cntr">
     <img src="img/spade_handle_transparent.png" alt="">
     <h3>spade</h3>
+</div>
+<div class="col-2 btn-cntr" id="btn-cntr">
+    <button>Log In</button>
 </div>

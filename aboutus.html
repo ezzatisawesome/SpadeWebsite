@@ -20,7 +20,8 @@
             $("#header").load("common/header.html")
             $("#header").click(() => {
 				$(location).attr("href", "index.html")
-			})
+            })
+            $("#footer").load("common/footer.html")
         })
     </script>
     <style>
@@ -71,18 +72,21 @@
         #mission {
             padding-top: 35px;
             background-color: #33353d;
-            height: 20vh;
+            
         }
 
         #aboutus {
             background-color: #33353d;
+            padding-top: 20vh;
         }
 
         #bios {
             background-color: #33353d;
-            height: 80vh;
+            min-height: 500px;
             display: flex;
             align-items: center;
+            
+            
         }
         #bios h3 {
             padding-top: 20px;
@@ -91,42 +95,51 @@
             height: 200px;
 
         }
+        .headshot{
+            width:20%
+        }
+        @media screen and (max-width:900px){
+            .headshot{
+                padding-top:30px;
+                width:100%
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container-fluid">
-        <div id="header">
+        <div id="header" class="row justify-content-between" >
         </div>
 
-        <div class="row color1" id="mission">
-            
-        </div>
+
         
         <div class="row color1 text-center" id="aboutus">
             <h1 class="lato-48">The Team</h1>
-            <p class="roboto-18">
-                We are highschoolers from Lake Forest Academy.
-                We decided to build this project as part of a hackathon.
+            <p class="roboto-18" style="max-width:800px;margin:auto">
+                Our mission is to deliver a personalized web experience by giving users the ability to create, record, and share the important details.
             </p>
         </div>
 
-        <div class="row justify-content-between text-center color1" id="bios">
-            <div class="col-4">
+        <div class="row justify-content-center text-center color1" id="bios">
+            <div class="headshot">
                 <img src="img/headshots/h1.png" alt="">
                 <h3 class="lato-18">Michael Xing</h3>
                 <p class="roboto-18">Progammer</p>
             </div>
-            <div class="col-4">
+            <div class="headshot">
                 <img src="img/headshots/h2.png" alt="">
                 <h3 class="lato-18">Bill Le</h3>
                 <p class="roboto-18">Programmer</p>
             </div>
-            <div class="col-4">
+            <div class="headshot">
                 <img src="img/headshots/h3.png" alt="">
                 <h3 class="lato-18">Ezzat Suhaime</h3>
                 <p class="roboto-18">Programmer</p>
             </div>
         </div>
+    </div>
+    <div id="footer">
+
     </div>
 </body>
 </html>
