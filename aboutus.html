@@ -5,33 +5,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Spade</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Lato:wght@400;700&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href="css/fontawesome/css/all.css" rel="stylesheet">
+    <link href="css/fontawesome/css/brands.css" rel="stylesheet">
+    <script src="js/jquery.js"></script>
     <script>
-        $(()=>{
-            $("#footer").load("common/footer.html").addClass("row justify-content-evenly text-center"); 
-        });
+        $(document).ready(() => {
+            $("#header").load("common/header.html")
+            $("#header").click(() => {
+				$(location).attr("href", "index.html")
+			})
+        })
     </script>
-    
     <style>
+        /* Fonts */
+        .lato-18 {
+            font-family: "Lato", sans-serif;
+            font-size: 18.75px;
+            letter-spacing: 0.03em;
+            font-weight: 700;
+        }
+        .lato-30 {
+            font-family: "Lato", sans-serif;
+            font-size: 30px;
+            letter-spacing: 0.06em;
+            font-weight: 400;
+        }
+        .lato-48 {
+            font-family: "Lato", sans-serif;
+            font-size: 48px;
+            letter-spacing: 0.03em;
+            font-weight: 700;
+        }
+        .lato-76 {
+            font-family: "Lato", sans-serif;
+            font-size: 76.8px;
+            letter-spacing: 0.03em;
+            font-weight: 700;
+        }
+        .roboto-18 {
+            font-family: "Roboto", sans-serif;
+            font-size: 18.75px;
+            letter-spacing: 0.03em;
+        }
+        .roboto-30 {
+            font-family: "Roboto", sans-serif;
+            font-size: 30px;
+            letter-spacing: 0.03em;
+        }
+        .roboto-48 {
+            font-family: "Roboto", sans-serif;
+            font-size: 48px;
+            letter-spacing: 0.03em;
+        }
         .color1 {
             color: white;
         }
 
         #mission {
             padding-top: 35px;
-            background-color: rgb(121, 136, 198);
+            background-color: #33353d;
             height: 20vh;
         }
 
         #aboutus {
-            background-color: rgb(121, 136, 198);
+            background-color: #33353d;
         }
 
         #bios {
-            background-color: rgb(121, 136, 198);
-            height: 50vh;
+            background-color: #33353d;
+            height: 80vh;
             display: flex;
             align-items: center;
         }
@@ -50,13 +99,12 @@
         </div>
 
         <div class="row color1" id="mission">
-            <h1 class="text-center">Our Mission</h1>
             
         </div>
         
         <div class="row color1 text-center" id="aboutus">
-            <h1>The Team</h1>
-            <p>
+            <h1 class="lato-48">The Team</h1>
+            <p class="roboto-18">
                 We are highschoolers from Lake Forest Academy.
                 We decided to build this project as part of a hackathon.
             </p>
@@ -65,22 +113,19 @@
         <div class="row justify-content-between text-center color1" id="bios">
             <div class="col-4">
                 <img src="img/headshots/h1.png" alt="">
-                <h3>Michael Xing</h3>
-                <p>Progammer</p>
+                <h3 class="lato-18">Michael Xing</h3>
+                <p class="roboto-18">Progammer</p>
             </div>
             <div class="col-4">
                 <img src="img/headshots/h2.png" alt="">
-                <h3>Bill Le</h3>
-                <p>Programmer</p>
+                <h3 class="lato-18">Bill Le</h3>
+                <p class="roboto-18">Programmer</p>
             </div>
             <div class="col-4">
                 <img src="img/headshots/h3.png" alt="">
-                <h3>Ezzat Suhaime</h3>
-                <p>Programmer</p>
+                <h3 class="lato-18">Ezzat Suhaime</h3>
+                <p class="roboto-18">Programmer</p>
             </div>
-        </div>
-
-        <div id="footer">
         </div>
     </div>
 </body>
