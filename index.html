@@ -1,680 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Spade</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-    href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Lato:wght@400;700&family=Roboto:wght@300&display=swap"
-    rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-<link href="css/fontawesome/css/all.css" rel="stylesheet">
-<link href="css/fontawesome/css/brands.css" rel="stylesheet">
-<script src="js/jquery.js"></script>
-<script>
-    $(document).ready(() => {
-        $("#footer").load("common/footer.html")
-        $("#login-cntr").click(() => {
-            $(location).attr("href", "signin.html")
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Lato:wght@400;700&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href="css/fontawesome/css/all.css" rel="stylesheet">
+    <link href="css/fontawesome/css/brands.css" rel="stylesheet">
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(() => {
+            $("#footer").load("common/footer.html")
+            $("#login-cntr").click(() => {
+                $(location).attr("href", "signin.html")
+            })
+            $("#get-btn").click(() => {
+                $(location).attr("href", "#")
+            })
         })
-        $("#get-btn").click(() => {
-            $(location).attr("href", "#")
-        })
-    })
-</script>
-<style>
-    /* Fonts */
-    @font-face {
-  font-family: 'superscratchy';
-  src: URL('Papaya Sunrise D.otf') format('truetype');
-}
+    </script>
+    <link rel="stylesheet" href="index.css">
 
-    .lato-18 {
-        font-family: "Lato", sans-serif;
-        font-size: 18.75px;
-        letter-spacing: 0.03em;
-        font-weight: 700;
-    }
-    .lato-30 {
-        font-family: "Lato", sans-serif;
-        font-size: 30px;
-        letter-spacing: 0.06em;
-        font-weight: 400;
-    }
-    .lato-48 {
-        font-family: "Lato", sans-serif;
-        font-size: 48px;
-        letter-spacing: 0.03em;
-        font-weight: 700;
-    }
-    .lato-76 {
-        font-family: "Lato", sans-serif;
-        font-size: 76.8px;
-        letter-spacing: 0.03em;
-        font-weight: 700;
-    }
-    .roboto-18 {
-        font-family: "Roboto", sans-serif;
-        font-size: 18.75px;
-        letter-spacing: 0.03em;
-    }
-    .roboto-30 {
-        font-family: "Roboto", sans-serif;
-        font-size: 30px;
-        letter-spacing: 0.03em;
-    }
-    .roboto-48 {
-        font-family: "Roboto", sans-serif;
-        font-size: 48px;
-        letter-spacing: 0.03em;
-    }
 
-    html {
-        font-size: 30px;
-        overflow-x: hidden;
-    }
-    .container-fluid {
-        padding: 0;
-    }
-
-    /* Header */
-    @media only screen and (max-width: 720px) {
-        #header {
-            padding-left: 50px;
-            padding-right: 50px;
-        }
-    }
-    @media only screen and (min-width: 720px) {
-        #header {
-            padding-left: 150px;
-            padding-right: 150px;
-        }
-    }
-    @media only screen and (min-width: 1500px) {
-        #header {
-            padding-left: 300px;
-            padding-right: 300px;
-        }
-    }
-    #header {
-        justify-content: space-between;
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
-    #logo-cntr {
-        width: auto;
-        display: flex;
-        flex-direction: row;
-        margin: 0px;
-        padding: 0px;
-    }
-    #logo-cntr img {
-        width: 50px;
-        height: 50px;
-    }
-    #logo-cntr h3 {
-        font-family: "superscratchy";
-        margin-top: 6px;
-        font-size: 30px;
-    }
-    #login-cntr {
-        width: auto;
-        margin: 0px;
-        padding: 0px;
-    }
-    #login-cntr button {
-        width: 133px;
-        height: 36px;
-        font-family: "Lato", cursive;
-        font-size: 18.75px;
-        font-weight: 400;
-        color: #ffffff;
-        border: none;
-        border-radius: 1rem;
-        background-color: #0f4fe6;
-    }
-
-    /* Headline */
-    @media only screen and (max-width: 768px) {
-        #headline p {
-            margin-bottom: 0.5em;
-        }
-    }
-    @media only screen and (min-width: 768px) {
-        #headline p {
-            margin-bottom: 0.5em;
-        }
-    }
-    @media only screen and (min-width: 1200) {
-        #headline p {
-            margin-bottom: 2em;
-        }
-    }
-    #headline {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-bottom: 6rem;
-        padding: 0;
-    }
-    #headline h1 {
-        width: auto;
-        text-align: center;
-        margin-bottom: 0.5em;
-    }
-    #headline p {
-        width: 60%;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    #headline .img-cntr {
-        position: relative;
-    }
-    #headline .img-cntr img {
-        width: 100%;
-    }
-
-    /* Annotations */
-    @media only screen and (max-width: 768px) {
-        #annotations {
-            padding-left: 1rem;
-            padding-right: 1rem;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        #annotations h3 {
-            text-align: center;
-        }
-        #annotations .intro {
-            text-align: center;
-        }
-        #annotations .intro p {
-            margin-bottom: 0.5rem;
-        }
-        #annotations .feature {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-        }
-    }
-    @media only screen and (min-width: 768px) {
-        #annotations  {
-            padding-left: 150px;
-            padding-right: 150px;
-        }
-        #annotations .intro p {
-            margin-bottom: 2rem;
-        }
-    }
-    @media only screen and (min-width: 1500px) {
-        #annotations {
-            padding-left: 300px;
-            padding-right: 300px;
-        }
-        #annotations .intro p {
-            margin-bottom: 2rem;
-        }
-    }
-    #annotations {
-        margin-bottom: 6rem;
-    }
-    #annotations h3 {
-        margin-bottom: 0.625rem;
-        padding: 0;
-    }
-    #annotations .col-md-12 {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    #annotations .col-lg-5 {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    #annotations .intro {
-        padding: 0;
-        margin: 0;
-    }
-    #annotations .feature {
-        align-items: center;
-        margin-bottom: 1rem;
-    }
-    #annotations .feature h3 {
-        font-family: "Lato", sans-serif;
-        font-size: 30px;
-        font-weight: 400;
-        letter-spacing: 0.03em;
-        text-align: left;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-    #annotations .feature p {
-        font-family: "Roboto", sans-serif;
-        font-size: 18.75px;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-    #annotations .img-cntr {
-        margin-top: auto;
-        margin-bottom: auto;
-        padding-right: 0;
-        padding-left: 0;
-    }
-    #annotations .img-cntr img {
-        width: 100%;
-    }
-
-    /* Citations */
-    @media only screen and (max-width: 768px) {
-        #citations {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        #citations .img-cntr {
-            display: none;
-        }
-        #citations .img-cntr-2 {
-            display: block;
-        }
-        #citations img {
-            width: 80%;
-        }
-        #citations .description-cntr {
-            padding-left: 0;
-        }
-        #citations .description-cntr p {
-            padding-left: 50px;
-        }
-    }
-    @media only screen and (min-width: 768px) {
-        #citations {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        #citations p, h3 {
-            margin-left: auto;
-            margin-right: auto;
-        }
-        #citations .img-cntr {
-            display: none;
-        }
-        #citations .img-cntr-2 {
-            display: block;
-        }
-        #citations img {
-            width: 80%;
-        }
-        #citations .description-cntr {
-            padding-left: 0;
-        }
-        #citations .description-cntr p {
-            padding-left: 50px;
-        }
-    }
-    @media only screen and (min-width: 992px) {
-        #citations {
-            text-align: left;
-            padding-left: 150px;
-            padding-right: 150px;
-            margin-bottom: 6rem;
-        }
-        #citations .img-cntr {
-            display: block;
-        }
-        #citations .img-cntr-2 {
-            display: none;
-        }
-        #citations img {
-            width: 450px;
-        }
-        #citations .description-cntr {
-            padding-left: 110px;
-        }
-        #citations .description-cntr h3 {
-            margin-bottom: 0.5rem;
-        }
-        #citations .description-cntr p {
-            padding-left: 0;
-        }
-    }
-    @media only screen and (min-width: 1500px) {
-        #citations {
-            padding-left: 300px;
-            padding-right: 300px;
-            margin-bottom: 6rem;
-        }
-        #citations .img-cntr {
-            width: 50%;
-        }
-        #citations .img-cntr-2 {
-            display: none;
-        }
-        #citations img {
-            width: 550px;
-        }
-        #citations .description-cntr {
-            width: 50%;
-            padding-left: 110px;
-        }
-    }
-    #citations .img-cntr {
-        padding-left: 0;
-    }
-    #citations .description-cntr {
-        padding-right: 0;
-    }
-
-    /* Ratings*/
-    @media only screen and (max-width: 540px) {
-        #pic2 {
-            display: none;
-        }
-    }
-    @media only screen and (max-width: 768px) {
-        #ratings {
-            text-align: center;
-        }
-        #ratings .img-cntr {
-            padding-left: 0;
-        }
-        #ratings .description-cntr {
-            padding-right: 0;
-        }
-        #ratings .description-cntr p {
-            padding-left: 50px;
-        }
-    }
-    @media only screen and (min-width: 768px) {
-        #ratings {
-            text-align: center;
-        }
-        #ratings p, h3 {
-            margin-left: auto;
-            margin-right: auto;
-        }
-        #ratings .img-cntr {
-            padding-left: 0;
-        }
-        #ratings .description-cntr {
-            padding-right: 0;
-        }
-        #ratings .description-cntr p {
-            padding-left: 50px;
-        }
-        #pic2 {
-            display: none;
-        }
-        #pic2 {
-            display: inline;
-        }
-    }
-    @media only screen and (min-width: 992px) {
-        #ratings {
-            text-align: left;
-            padding-left: 150px;
-            padding-right: 150px;
-        }
-        #ratings .img-cntr {
-            text-align: end;
-        }
-        #ratings .description-cntr h3 {
-            margin-bottom: 0.5rem;
-        }
-        #ratings .description-cntr p {
-            padding-left: 0;
-        }
-        #pic2 {
-            display: none;
-        }
-    }
-    @media only screen and (min-width: 1500px) {
-        #ratings {
-            padding-left: 300px;
-            padding-right: 300px;
-        }
-        #ratings .img-cntr {
-            text-align: end;
-            width: 50%;
-        }
-        #ratings .description-cntr {
-            width: 50%;
-        }
-    }
-    @media only screen and (min-width: 1700px) {
-        #pic2 {
-            display: inline;
-        }
-    }
-    #ratings {
-        margin-bottom: 6rem;
-    }
-    #ratings .img-cntr {
-        text-align: center;
-        padding-right: 0;
-    }
-    #ratings .description-cntr {
-        padding-left: 0;
-    }
-    
-    /* Summarization */
-    #summary {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    #summary h3 {
-        width: auto;
-        text-align: center;
-        margin-bottom: 1rem;
-        padding: 0;
-    }
-    #summary p {
-        width: auto;
-        text-align: center;
-        padding: 0;
-        margin-bottom: 1rem;
-    }
-    #summary .img-cntr {
-        display: flex;
-        justify-content: center;
-    }
-    #summary .img-cntr img {
-        width: 90%
-    }
-
-    /* Final Download Link */
-    @media only screen and (max-width:800px){
-        .lato-76{
-            font-size:50px
-        }
-        .roboto-30{
-            font-size:17px !important
-        }
-    }
-    #remarks {
-        height: 25rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        margin-left: 0;
-        margin-right: 0;
-    }
-    #remarks h2 {
-        width: auto;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    #remarks h3 {
-        width: auto;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    #remarks button {
-        width: 300px;
-        height: 60px;
-        color: white;
-        border: none;
-        border-radius: 1rem;
-        background-color: #0f4fe6;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    /* Border */
-    .border {
-    border: 1px solid black;
-    }
-    .border1{
-    border: 1px solid blue;
-    }
-    /* 
-  You want a simple and fancy tooltip?
-  Just copy all .vocab-tooltip blocks:
-*/
-.vocab-tooltip {
-  position: relative;
-  z-index: 10;
-  border:none;
-  background: hsl(236, 47%, 82%);
-}
-
-/* Positioning and visibility settings of the tooltip */
-.vocab-tooltip:before,
-.vocab-tooltip:after {
-  position: absolute;
-  visibility: hidden;
-  opacity: 0;
-  left: 50%;
-  bottom: calc(100% + 5px); /* 5px is the size of the arrow */
-  pointer-events: none;
-  transition: 0.2s;
-  will-change: transform;
-}
-
-/* The actual tooltip with a dynamic width */
-.vocab-tooltip:before {
-  content: attr(data-tooltip);
-  padding: 10px 18px;
-  min-width: 50px;
-  max-width: 300px;
-  width: max-content;
-  width: -moz-max-content;
-  border-radius: 6px;
-  font-size: 14px;
-  background-color:hsl(236, 50%, 52%);
-  background-image: linear-gradient(30deg,
-  hsl(236, 50%, 52%),
-  hsl(236, 72%, 38%));
-  color: #fff;
-  text-align: center;
-  white-space: pre-wrap;
-  transform: translate(-50%, -5px) scale(0.5);
-}
-
-/* Tooltip arrow */
-.vocab-tooltip:after {
-  content: '';
-  border-style: solid;
-  border-width: 5px 5px 0px 5px; /* CSS triangle */
-  border-color: rgba(55, 64, 70, 0.9) transparent transparent transparent;
-  transition-duration: 0s; /* If the mouse leaves the element, 
-                              the transition effects for the 
-                              tooltip arrow are "turned off" */
-  transform-origin: top;   /* Orientation setting for the
-                              slide-down effect */
-  transform: translateX(-50%) scaleY(0);
-}
-
-/* Tooltip becomes visible at hover */
-.vocab-tooltip:hover:before,
-.vocab-tooltip:hover:after {
-  visibility: visible;
-  opacity: 1;
-}
-/* Scales from 0.5 to 1 -> grow effect */
-.vocab-tooltip:hover:before {
-  transition-delay: 0.3s;
-  transform: translate(-50%, -5px) scale(1);
-}
-/* 
-  Arrow slide down effect only on mouseenter (NOT on mouseleave)
-*/
-.vocab-tooltip:hover:after {
-  transition-delay: 0.5s; /* Starting after the grow effect */
-  transition-duration: 0.2s;
-  transform: translateX(-50%) scaleY(1);
-}
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  .vocab-tooltip:hover {
-    background-color: hsl(236, 55%, 41%);
-    color:white;
-  }
-  .vocab-tooltip:active {
-    transform: scale(0.98);
-  }
-
-  
-.vocab-popup-add{
-  display: none;
-}
-
-.vocab-popup-add button{
-  background-color: hsl(236, 50%, 52%);
-  color:white;
-  border:none;
-  padding:5px
-}
-.vocab-popup-add button:hover{
-  cursor:pointer
-}
-*{
-    box-sizing:border-box
-}
-
-</style>
 </head>
 
 <body>
-<div class="container-fluid">
-    <div class="row" id="header">
-        <div class="col-2" id="logo-cntr">
+    <div class="row justify-content-between" id="header">
+        <div class="col-2 logo-cntr" id="logo-cntr">
             <img src="img/spade_handle_transparent.png" alt="">
             <h3>spade</h3>
         </div>
-        <div class="col-2" id="login-cntr">
+        <div class="col-2 btn-cntr" id="btn-cntr">
             <button>Log In</button>
         </div>
     </div>
     <div class="row" id="headline">
         <h1 class="lato-76">Research Simplified</h1>
         <p class="roboto-30">
-            Spade allows you to directly <button
-            style="font-size:30px"
-            data-tooltip="add notes to (a text or diagram) giving explanation or comment."
-            class="vocab-tooltip"
-            >annotate</button> on, automatically cite, assess credibility, and webscrape
+            Spade allows you to directly <button style="font-size:30px"
+                data-tooltip="add notes to (a text or diagram) giving explanation or comment."
+                class="vocab-tooltip">annotate</button> on, automatically cite, assess credibility, and webscrape
             webpages.
 
-           
+
         </p>
         <div class="img-cntr">
             <img src="img/headline.svg" alt="">
@@ -710,8 +86,9 @@
             <img src="img/citations.svg" alt="">
         </div>
         <div class="col-md-12 col-lg-6 description-cntr">
-            <h3 class="lato-48">cool citations</h3>
-            <p class="roboto-18">Spade automatically cites webpages in MLA, Chicago, APA and compiles citations into a list for you.</p>
+            <h3 class="lato-48" style="text-align:right">cool citations</h3>
+            <p class="roboto-18">Spade automatically cites webpages in MLA, Chicago, APA and compiles citations into a
+                list for you.</p>
         </div>
         <div class="col-12 img-cntr-2">
             <img src="img/citations.svg" alt="">
@@ -725,9 +102,16 @@
             </p>
         </div>
         <div class="col-md-12 col-lg-6 img-cntr">
-            <img src="img/ratings0.png" style="height: 300px; border-radius: 0.5rem;    border: 7px solid #eee;" alt="">
-            <img src="img/ratings1.png" style="height: 300px; border-radius: 0.5rem;    border: 7px solid #eee; margin-left: 1rem;" alt="">
-            <img src="img/ratings2.png" style="height: 300px; border-radius: 0.5rem;    border: 7px solid #eee; margin-left: 1rem;" alt="" id="pic2">
+            <!-- <<<<<<< HEAD <img src="img/ratings0.png"
+                style="height: 300px; border-radius: 0.5rem;    border: 7px solid #eee;" alt="">
+                <img src="img/ratings1.png"
+                    style="height: 300px; border-radius: 0.5rem;    border: 7px solid #eee; margin-left: 1rem;" alt="">
+                <img src="img/ratings2.png"
+                    style="height: 300px; border-radius: 0.5rem;    border: 7px solid #eee; margin-left: 1rem;" alt=""
+                    id="pic2">
+                ======= -->
+                <img src="img/ratings.png" style="height: 300px;" alt="">
+                <!-- >>>>>>> 578114d11ba8f7b6cfa90d1913bf806f708e9e72 -->
         </div>
     </div>
     <div class="row" id="summary">
@@ -750,6 +134,6 @@
     <div id="footer">
 
     </div>
-</div>
 </body>
+
 </html>
