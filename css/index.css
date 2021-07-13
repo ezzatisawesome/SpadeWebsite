@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'superscratchy';
-    src: URL('Papaya Sunrise D.otf') format('truetype');
+src: URL('../fonts/papaya_sunrise_d.otf') format('truetype');
 }
 /* Fonts */
 .lato-18 {
@@ -307,8 +307,8 @@ body {
 }
 @media only screen and (min-width: 992px) {
     #annotations {
-        padding-left: 100px;
-        padding-right: 100px;
+        padding-left: 150px;
+        padding-right: 150px;
         margin-bottom: 6rem;
     }
     #annotations img {
@@ -349,6 +349,7 @@ body {
 @media only screen and (max-width: 568px) {
     #citations {
         padding-left: 25px;
+        padding-right: 25px;
         margin-bottom: 3rem;
     }
     #citations .description-cntr {
@@ -388,12 +389,12 @@ body {
 }
 @media only screen and (min-width: 992px) {
     #citations {
-        padding-left: 100px;
-        padding-right: 100px;
+        padding-left: 150px;
+        padding-right: 150px;
         margin-bottom: 6rem;
     }
     #citations .description-cntr p {
-        width: 400px;
+        width: 320px;
         
     }
     #citations .img-cntr {
@@ -553,11 +554,11 @@ body {
     z-index: 10;
     border:none;
     background: hsl(236, 47%, 82%);
-  }
-  
-  /* Positioning and visibility settings of the tooltip */
-  .vocab-tooltip:before,
-  .vocab-tooltip:after {
+}
+
+/* Positioning and visibility settings of the tooltip */
+    .vocab-tooltip:before,
+    .vocab-tooltip:after {
     position: absolute;
     visibility: hidden;
     opacity: 0;
@@ -566,10 +567,10 @@ body {
     pointer-events: none;
     transition: 0.2s;
     will-change: transform;
-  }
-  
-  /* The actual tooltip with a dynamic width */
-  .vocab-tooltip:before {
+}
+
+/* The actual tooltip with a dynamic width */
+.vocab-tooltip:before {
     content: attr(data-tooltip);
     padding: 10px 18px;
     min-width: 50px;
@@ -586,10 +587,10 @@ body {
     text-align: center;
     white-space: pre-wrap;
     transform: translate(-50%, -5px) scale(0.5);
-  }
-  
-  /* Tooltip arrow */
-  .vocab-tooltip:after {
+}
+
+/* Tooltip arrow */
+.vocab-tooltip:after {
     content: '';
     border-style: solid;
     border-width: 5px 5px 0px 5px; /* CSS triangle */
@@ -600,61 +601,46 @@ body {
     transform-origin: top;   /* Orientation setting for the
                                 slide-down effect */
     transform: translateX(-50%) scaleY(0);
-  }
+}
   
-  /* Tooltip becomes visible at hover */
-  .vocab-tooltip:hover:before,
-  .vocab-tooltip:hover:after {
+/* Tooltip becomes visible at hover */
+    .vocab-tooltip:hover:before,
+    .vocab-tooltip:hover:after {
     visibility: visible;
     opacity: 1;
-  }
-  /* Scales from 0.5 to 1 -> grow effect */
-  .vocab-tooltip:hover:before {
+}
+/* Scales from 0.5 to 1 -> grow effect */
+.vocab-tooltip:hover:before {
     transition-delay: 0.3s;
     transform: translate(-50%, -5px) scale(1);
-  }
-  /* 
-    Arrow slide down effect only on mouseenter (NOT on mouseleave)
-  */
-  .vocab-tooltip:hover:after {
+}
+/* 
+Arrow slide down effect only on mouseenter (NOT on mouseleave)
+*/
+.vocab-tooltip:hover:after {
     transition-delay: 0.5s; /* Starting after the grow effect */
     transition-duration: 0.2s;
     transform: translateX(-50%) scaleY(1);
-  }
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    .vocab-tooltip:hover {
-      background-color: hsl(236, 55%, 41%);
-      color:white;
-    }
-    .vocab-tooltip:active {
-      transform: scale(0.98);
-    }
-  
-    
-  .vocab-popup-add{
+}
+.vocab-tooltip:hover {
+    background-color: hsl(236, 55%, 41%);
+    color:white;
+}
+.vocab-tooltip:active {
+    transform: scale(0.98);
+}
+
+
+.vocab-popup-add{
     display: none;
-  }
-  
-  .vocab-popup-add button{
+}
+
+.vocab-popup-add button{
     background-color: hsl(236, 50%, 52%);
     color:white;
     border:none;
     padding:5px
-  }
-  .vocab-popup-add button:hover{
+}
+.vocab-popup-add button:hover{
     cursor:pointer
-  }
+}
