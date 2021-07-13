@@ -1,0 +1,527 @@
+/* Fonts */
+.lato-18 {
+    font-family: "Lato", sans-serif;
+    font-size: 18.75px;
+    letter-spacing: 0.03em;
+    font-weight: 700;
+}
+.lato-30 {
+    font-family: "Lato", sans-serif;
+    font-size: 30px;
+    letter-spacing: 0.06em;
+    font-weight: 400;
+}
+.lato-48 {
+    font-family: "Lato", sans-serif;
+    font-size: 48px;
+    letter-spacing: 0.03em;
+    font-weight: 700;
+}
+.lato-76 {
+    font-family: "Lato", sans-serif;
+    font-size: 76.8px;
+    letter-spacing: 0.03em;
+    font-weight: 700;
+}
+.roboto-18 {
+    font-family: "Roboto", sans-serif;
+    font-size: 18.75px;
+    letter-spacing: 0.03em;
+    color: grey;
+}
+.roboto-30 {
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    letter-spacing: 0.03em;
+    color: grey;
+}
+.roboto-48 {
+    font-family: "Roboto", sans-serif;
+    font-size: 48px;
+    letter-spacing: 0.03em;
+    color: grey;
+}
+
+html {
+    font-size: 30px;
+    overflow-x: hidden;
+}
+body {
+    overflow-x: hidden;
+}
+
+
+/* Header */
+@media only screen and (max-width: 568px) {
+    #header {
+        padding-left: 25px;
+        margin-top: 0rem;
+    }
+    #header #btn-cntr {
+        display: none;
+    }
+}
+@media only screen and (min-width: 568px) {
+    #header {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    #header {
+        margin-top: 1rem;
+    }
+}
+@media only screen and (min-width: 992px) {
+    #header {
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+}
+@media only screen and (min-width: 1500px) {
+    #header {
+        padding-left: 300px;
+        padding-right: 300px;
+    }
+}
+#header {
+    margin-left: 0;
+    margin-right: 0;
+}
+#header img {
+    height: 50px;
+}
+#header .logo-cntr {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    padding: 0;
+}
+#header .logo-cntr h3 {
+    position: relative;
+    top: 6px;
+    left: 3px;
+    font-family: "Comfortaa", cursive;
+    font-size: 30px;
+}
+#header .btn-cntr {
+    width: auto;
+    padding: 0;
+}
+#header .btn-cntr button {
+    width: 133px;
+    height: 36px;
+    font-family: "Lato", cursive;
+    font-size: 18.75px;
+    font-weight: 400;
+    color: #ffffff;
+    border: none;
+    border-radius: 1rem;
+    background-color: #0f4fe6;
+}
+
+
+/* Headline */
+@media only screen and (max-width: 568px) {
+    #headline {
+        margin-bottom: 3rem;
+    }
+    #headline h1 {
+        width: 400px;
+        font-size: 48px !important;
+    }
+    #headline p {
+        width: 300px;
+        font-size: 18px !important;
+    }
+    #headline .img-cntr {
+        padding: 0;
+    }
+    #headline img {
+        width: 150%;
+        position: relative;
+        left: -25%;
+    }
+}
+@media only screen and (min-width: 568px) {
+    #headline {
+        margin-bottom: 4rem;
+    }
+    #headline h1 {
+        width: 600px;
+    }
+    #headline p {
+        width: 600px;
+    }  
+    #headline .img-cntr {
+        padding: 0;
+    }
+    #headline img {
+        width: 120%;
+        position: relative;
+        left: -10%;
+    }
+}
+@media only screen and (min-width: 768px) {
+    #headline {
+        margin-bottom: 6rem;
+    }
+    #headline h1 {
+        width: 750px;
+    }
+    #headline p {
+        width: 700px;
+    }
+    #headline .img-cntr {
+        padding: 0;
+    }
+    #headline img {
+        width: 100vw;
+        position: relative;
+        left: 0;
+    }
+}
+@media only screen and (min-width: 1500px) {
+    #headline h1 {
+        width: 1000px;
+    }
+    #headline p {
+        width: 1100px;
+    }
+    #headline img {
+        width: 75vw;
+    }
+}
+#headline {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+}
+#headline h1 {
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+#headline p {
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+
+
+
+/* Annotations */
+@media only screen and (max-width: 568px) {
+    #annotations {
+        padding-left: 25px;
+        margin-bottom: 3rem;
+    }
+    #annotations h3 {
+        font-size: 30px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #annotations .intro {
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #annotations .intro p {
+        text-align: center;
+        font-size: 18px;
+    }
+    #annotations .feature h3 {
+        font-size: 18px;
+    }
+    #annotations .feature p {
+        font-size: 18px;
+    }
+    #annotations img {
+        position: relative;
+        width: 170%;
+        left: -33%;
+    }
+}
+@media only screen and (min-width: 568px) {
+    #annotations {
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-bottom: 3rem;
+    }
+    #annotations h3 {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #annotations .intro {
+        width: 500px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #annotations .feature h3 {
+        font-size: 30px;
+    }
+    #annotations .feature p {
+        font-size: 18.75px;
+    }
+    #annotations img {
+        position: relative;
+        width: 130%;
+        left: -11%;
+    }
+}
+@media only screen and (min-width: 768px) {
+    #annottations {
+        margin-bottom: 4rem;
+    }
+    #annotations h3 {
+        text-align: left;
+    }
+    #annotations .intro {
+        text-align: left;
+        margin: 0;
+    }
+}
+@media only screen and (min-width: 992px) {
+    #annotations {
+        padding-left: 150px;
+        padding-right: 150px;
+        margin-bottom: 6rem;
+    }
+    #annotations img {
+        width: 900px;
+        position: relative;
+        left: 10%;
+        top: -40px;
+    }
+}
+@media only screen and (min-width: 1500px) {
+    #annotations {
+        padding-left: 300px;
+        padding-right: 300px;
+    }
+}
+#annotations .feature {
+    margin-bottom: 1rem;
+}
+#annotations .feature h3 {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#annotations .feature p {
+    font-family: "Roboto", sans-serif;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+/* Citations */
+@media only screen and (max-width: 568px) {
+    #citations {
+        padding-left: 25px;
+        margin-bottom: 3rem;
+    }
+    #citations .description-cntr {
+        width: 400px;
+    }
+    #citations .description-cntr h3 {
+        font-size: 30px;
+    }
+    #citations .description-cntr p {
+        font-size: 18px;
+    }
+    #citations .img-cntr {
+        display: none;
+    }
+    #citations .img-cntr-2 {
+        display: block;
+    }
+    #citations img {
+        width: 90vw;
+    }
+}
+@media only screen and (min-width: 568px) {
+    #citations {
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-bottom: 4rem;
+    }
+    #citations .img-cntr {
+        display: none;
+    }
+    #citations .img-cntr-2 {
+        display: block;
+    }
+    #citations img {
+        width: 90vw;
+    }
+}
+@media only screen and (min-width: 992px) {
+    #citations {
+        padding-left: 150px;
+        padding-right: 150px;
+        margin-bottom: 6rem;
+    }
+    #citations .description-cntr p {
+        width: 400px;
+    }
+    #citations .img-cntr {
+        display: block;
+    }
+    #citations .img-cntr-2 {
+        display: none;
+    }
+    #citations img {        
+        width: 370px;
+        position: relative;
+        top: 30px;
+    }
+}
+@media only screen and (min-width: 1500px) {
+    #citations {
+        padding-left: 300px;
+    }
+}
+@media only screen and (min-width: 1500px) {
+    #citations img {
+        width: 550px;
+        position: relative;
+        top: 10px;
+    }
+}
+
+
+/* Ratings */
+@media only screen and (max-width: 568px) {
+    #ratings {
+        padding-left: 25px;
+        margin-bottom: 3rem;
+    }
+    #ratings h3 {
+        font-size: 30px;
+    }
+}
+@media only screen and (min-width: 568px) {
+    #ratings {
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-bottom: 3rem;
+    }
+}
+@media only screen and (min-width: 992px) {
+    #ratings {
+        padding-left: 150px;
+        padding-right: 150px;
+        margin-bottom: 6rem;
+    }
+    #ratings .description-cntr p {
+        width: 360px;
+    }
+}
+@media only screen and (min-width: 1500px) {
+    #ratings {
+        padding-left: 300px;
+        padding-right: 300px;
+    }
+}
+#ratings h3, #ratings p {
+    text-align: left;
+}
+
+
+/* Summary */
+@media only screen and (max-width: 568px) {
+    #summary h3 {
+        font-size: 30px;
+    }
+    #summary p {
+        font-size: 18px;
+        margin-bottom: 1em;
+    }
+    #summary .img-cntr {
+        padding: 0;
+        margin: 0;
+    }
+    #summary img {
+        position: relative;
+        left: 2.5%;
+        width: 95%;
+    }
+}
+@media only screen and (min-width: 568px) {
+    #summary .img-cntr {
+        padding: 0;
+        margin: 0;
+    }
+    #summary img {
+        position: relative;
+        left: 2.5%;
+        width: 95%;
+
+    }
+}
+@media only screen and (min-width: 1500px) {
+    #summary .img-cntr {
+        padding: 0;
+        margin: 0;
+    }
+    #summary img {
+        position: relative;
+        left: 12.5%;
+        width: 75%;
+    }
+}
+#summary h3, #summary p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+#summary h3 {
+    margin-bottom: 1rem;
+}
+#summary p {
+    margin-bottom: 1rem;
+}
+
+
+/* Remarks */
+#remarks {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+}
+#remarks h2 {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+#remarks h3 {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+#remarks button {
+    width: 300px;
+    height: 60px;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    background-color: #0f4fe6;
+    margin-left: auto;
+    margin-right: auto;
+}
